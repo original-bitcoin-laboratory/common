@@ -14,6 +14,9 @@ verified, built, and publishable under `github.com/original-bitcoin-laboratory`.
 This `common/` folder is its **own** (umbrella) repository. It holds material
 shared across both editions:
 
+- `AUTHORITY.md` — the authority set (the two hash-verified archives + whitepaper)
+  and everything explicitly placed **out of authority** (SNI-as-curator, Citadel,
+  mirrors, forks, v0.1.3, SourceForge/Git, modern apps), with the mirror graph.
 - `ROADMAP.md` — the R0–R9 program spanning both editions.
 - `conformance/` — future cross-edition and descendant (BTC / BCH / BSV)
   comparison work, produced only after both original profiles are frozen.
