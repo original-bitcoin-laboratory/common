@@ -199,14 +199,22 @@ Each result is captured as a deterministic evidence bundle (same discipline as
 ## 9. Build order (R8)
 
 1. **[this doc]** design + provenance ledger. ✅
-2. Freeze the exact NOV08 semantic set as a machine‑readable `rules_nov08.json` (A1–A9 with source anchors).
-3. Build **NOV08‑Minimal**: the derivatives stack under the Rule A swap table + Rule B substrate, emitting `PROVENANCE.json`.
-4. Differential‑test NOV08‑Minimal vs the JAN09 stack (§8); capture the bundle.
-5. Mint the **NOV08‑X** genesis + identity (§6); bring up two isolated headless nodes.
-6. Evidence bundle: issuance/timing/coinbase‑rule/vocabulary differences, live.
+2. Freeze the exact NOV08 semantic set as machine‑readable `rules_nov08.json` (source‑anchored). ✅ (`genesis/derivatives/nov08x/rules_nov08.json`)
+3. Build **NOV08‑Minimal**: the derivatives stack under Rule A + Rule B, emitting `PROVENANCE.json`. ✅ (`nov08x/consensus.py`, `node.py`; `PROVENANCE.json`)
+4. Differential‑test NOV08‑Minimal vs the JAN09 stack (§8). ✅ (`nov08x/differential.py` → `DIFFERENTIAL.md`; `test_nov08x.py`)
+5. Mint the **NOV08‑X** genesis + identity (§6); two isolated headless nodes. ✅ (`nov08x/net.py`: magic `f00ba708`, port 18008, genesis `00000f08…`; `test_net.py` — two nodes sync)
+6. Evidence bundle: issuance/timing/coinbase‑rule/vocabulary differences, live. ✅ (14 N‑ORIG rules in `PROVENANCE.json`; 20 tests)
 7. *(optional, walled‑off)* **NOV08‑Full** — completion toward the broader design.
-   This is **interpretive**, must be labelled speculation, and must never be
-   presented as recovered code. Considered only after Minimal is complete.
+   Still open. **Interpretive**, must be labelled speculation, never presented as
+   recovered code.
+
+**Findings from building it (all N‑ORIG, source‑anchored):** NOV08's PoW is a
+*different algorithm* — `nBits` = required **leading‑zero bits**, `target = ~0 >>
+nBits`, `MINPROOFOFWORK=20` ("ridiculously easy for testing", `main.h:38`) — and its
+retarget is a primitive **±1‑bit nudge** (`main.cpp:660‑705`), not JAN09's compact
+format + proportional retarget. Subsidy is `10000*CENT` (100 coins) halving via an
+explicit loop on the global best height (`main.cpp:652‑657`); coinbase must **equal**
+subsidy+fees (`main.cpp:739`).
 
 ---
 
