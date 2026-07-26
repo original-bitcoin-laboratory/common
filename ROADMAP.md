@@ -56,6 +56,13 @@
 - Modern tooling and security hardening with historical semantic profiles.
 - Differential testing against the historical oracle.
 
+> **NOV08-X design + provenance ledger:** [`nov08x/DESIGN_LEDGER.md`](nov08x/DESIGN_LEDGER.md)
+> — the contract for a counterfactual network that executes November's constitution
+> (`main.*`/`node.*` + the monetary rules A1–A9) on the reconstructed substrate, with
+> the **full original opcode vocabulary and nothing disabled**, every line
+> provenance-classed (N-ORIG / N-IFACE / J-DONOR / NEW-EXP). Build is headless on the
+> `genesis/derivatives` stack — no period-toolchain compile.
+
 ## R9 — Descendant Conformance
 
 - Open-ended candidate registry.
