@@ -63,6 +63,9 @@ and well‑chosen (transparent, non‑NIST parameters); the shared long‑term e
 **algorithm**, not the implementation. This is the single cell where "secp256k1 is a weak
 point of *all* of them" is true — and it's the frontier post‑quantum cryptography targets.
 
+This cell is made concrete — Shor vs Grover, which outputs expose their public keys, and why
+the origin's **bare‑P2PK** coins are the sharpest case — in [`QUANTUM_EXPOSURE.md`](QUANTUM_EXPOSURE.md).
+
 ## Boundary
 
 Source‑verified rows (NOV08 / v0.1.0 / v0.1.3) are ground truth from this repo. Modern rows
