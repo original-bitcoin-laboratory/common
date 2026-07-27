@@ -77,23 +77,48 @@ The **universal thing Bitcoin *is*** is the **origin, anchored at genesis** — 
 non‑arbitrary fixed point, and the thing *even two disagreeing people already share*: a
 BTC‑holder and a BSV‑holder both trace to the same genesis block.
 
+### Why the instance is anchored at January (genesis), not the November pre‑release
+
+This is **not** a preference for one codebase over another — it is *when the thing being
+defined began to exist.* The genesis block is a **January (v0.1.0)** artifact; the pre‑release
+is, by name and by fact, **pre‑genesis** — no genesis block was mined from it, no chain
+launched, no ledger ran, no balance ever existed under it. An instance cannot be defined from
+an artifact that **predates the instance.** So the two artifacts anchor **different senses**:
+
+- **Type / design** (the abstract concept) → the **whitepaper + the pre‑release**, the earlier
+  sources; here November is legitimately the *more original*.
+- **Instance** (the running system — genesis, ledger, network, unit, asset) → **v0.1.0's
+  genesis**, *necessarily*, because that is when it came into being.
+
+The pre‑release is *Bitcoin's design before launch*; it is not, and cannot be, the launched
+instance. Any sense of "Bitcoin" that has a genesis, a ledger, a network, or a unit is a
+January fact — by existence, not by ranking.
+
 ## 5. What a "satoshi" is
 
-The **word** "satoshi" is a later community coinage (~2010–11) and appears nowhere in the
-whitepaper as a unit. But the **thing** it names is defined at the origin — in the **code, not
-the paper**: `static const int64 COIN = 100000000;` (v0.1.0 `main.h:18`), with every output's
-value carried in an integer `nValue` field. Hence:
+The code names **neither** "satoshi" **nor** "bitcoin." What
+`static const int64 COIN = 100000000;` (v0.1.0 `main.h:18`) fixes is **structure, not names**:
 
-> **A satoshi is the atomic, indivisible integer unit of the ledger's value field — the
-> quantum of account. By the origin implementation, 1 bitcoin ≡ 100,000,000 satoshi. There is
-> no sub‑satoshi in the protocol.**
+- `nValue` is an `int64`, so value is carried in **indivisible integer units** — there is no
+  fractional value in the protocol;
+- `COIN` names a single **aggregate**: 1 `COIN` = 100,000,000 of those atomic units.
 
-This 10⁸ is a **January (v0.1.0)** decision — November's `COIN` was 10⁶ — so "satoshi = 10⁻⁸"
-is specifically a genesis‑era v0.1.0 fact, re‑derived from the lab's own source.
+The words are conventions layered on afterward (the code's own identifier is `COIN`; "satoshi"
+is a ~2010–11 coinage). So, precisely:
 
-The symmetry with §4: the **definition** of both *bitcoin* and *satoshi* is **invariant across
-every genesis‑sharing fork** (all inherited it from the origin); only a specific *balance* is
-ledger‑relative. **The definition is universal; the instance is contingent.**
+> **A satoshi is the atomic, indivisible integer unit of the ledger's value field (`nValue`); a
+> bitcoin is 10⁸ of them (the code's `COIN`).** The *referents* — the atomic unit, the
+> aggregate, and the 10⁸ ratio — are artifact‑fixed; the *names* are convention.
+
+This 10⁸ is specifically a **January (v0.1.0)** fact: November's `COIN` was **10⁶**, so the
+atomic‑unit‑to‑coin ratio there was 10⁻⁶. **The "10⁻⁸ satoshi" does not exist in the
+pre‑release at all** — it is a different unit. Far from an arbitrary preference for v0.1.0, the
+satoshi is *forced* to be a genesis‑era fact: it is the only place it exists (see §4's
+type‑vs‑instance note).
+
+The symmetry with §4: this atomic‑unit + 10⁸‑ratio structure is **invariant across every
+genesis‑sharing fork** (all inherited it from the origin); only a specific *balance* is
+ledger‑relative. **The structure is universal; the instance is contingent.**
 
 ## 6. Using the vocabulary — the two examples, resolved
 
