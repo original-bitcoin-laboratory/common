@@ -69,7 +69,7 @@ python genesis/scripts/verify_genesis.py   # both experimental genesis blocks re
 
 | Repo | What |
 |---|---|
-| [`common/`](.) (this one) | umbrella: [`WHAT_IS_BITCOIN.md`](WHAT_IS_BITCOIN.md), [`THESIS.md`](THESIS.md), [`FINDINGS.md`](FINDINGS.md), [`CLAIMS.md`](CLAIMS.md), [`AUTHORITY.md`](AUTHORITY.md), [`ROADMAP.md`](ROADMAP.md), the conformance/attack‑surface matrices, the NOV08‑X design ledger |
+| [`common/`](.) (this one) | umbrella: [`WHAT_IS_BITCOIN.md`](WHAT_IS_BITCOIN.md), [`DEFINITIONAL_FIDELITY.md`](DEFINITIONAL_FIDELITY.md), [`THESIS.md`](THESIS.md), [`FINDINGS.md`](FINDINGS.md), [`CLAIMS.md`](CLAIMS.md), [`AUTHORITY.md`](AUTHORITY.md), [`ROADMAP.md`](ROADMAP.md), the conformance/attack‑surface matrices, the NOV08‑X design ledger |
 | `pre-genesis/` | **OBL‑NOV08** — the Nov 15 2008 pre‑release witness + inventory |
 | `genesis/` | **OBL‑JAN09** — Bitcoin v0.1.0: the full executable reconstruction + derivatives |
 
