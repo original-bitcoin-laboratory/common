@@ -73,3 +73,7 @@ are **documented** from the public record and would need each chain's source to 
 [S] — the same "executed vs documented" honesty as the conformance matrix, applied equally.
 Nothing here asserts a live exploit; it maps *where risk has historically lived and who
 still carries which dependency.*
+
+The companion inventory [`CONSENSUS_SURFACE.md`](CONSENSUS_SURFACE.md) maps the *code‑level*
+bounds (money range, block size, script limits) the origin left unbounded — the guardrails
+this dependency map's incidents later motivated.
