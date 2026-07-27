@@ -62,9 +62,11 @@ claimant, cryptographically unique and unforgeable, and traced back to by all of
 **genesis block** (`000000000019d668…` — reproduced three independent ways by the lab: the
 unmodified 2009 binary, the C++/OpenSSL port, and the Python model). Hence:
 
-> **Bitcoin is the specific system Satoshi originated: the design fixed by the whitepaper plus
-> the mechanism fixed by the reference implementation, uniquely anchored by the genesis block.
-> Everything called "Bitcoin" downstream is a *continuation of that one rooted instance.***
+> **Bitcoin is, fundamentally, the *design* Satoshi specified — the whitepaper's system,
+> realised in the reference implementation. Its everyday referent — the running system with a
+> ledger, networks, and a unit — is the family that shares the genesis block
+> `000000000019d668…`; *which* member of that family, and *which* numbers, count as "Bitcoin"
+> is convention.**
 
 Two precise senses fall out of this:
 
@@ -73,26 +75,25 @@ Two precise senses fall out of this:
 - **Bitcoin (the instance)** — the genesis‑rooted system: the shared root of BTC/BCH/BSV/XEC.
   Post‑fork it is a *branching continuant*; no single branch is uniquely it.
 
-The **universal thing Bitcoin *is*** is the **origin, anchored at genesis** — the only
-non‑arbitrary fixed point, and the thing *even two disagreeing people already share*: a
-BTC‑holder and a BSV‑holder both trace to the same genesis block.
+### The design anchor is fundamental; the instance anchor is a convention
 
-### Why the instance is anchored at January (genesis), not the November pre‑release
+The **fundamental invariant** — shared *without appeal to any convention* — is the **design**:
+the pre‑release, v0.1.0, and every descendant realise it. The **instance** has a shared root
+(v0.1.0's genesis) that the BTC/BCH/BSV/XEC family traces to, and that is what most people
+mean. But two honest caveats keep this from privileging a codebase by fiat:
 
-This is **not** a preference for one codebase over another — it is *when the thing being
-defined began to exist.* The genesis block is a **January (v0.1.0)** artifact; the pre‑release
-is, by name and by fact, **pre‑genesis** — no genesis block was mined from it, no chain
-launched, no ledger ran, no balance ever existed under it. An instance cannot be defined from
-an artifact that **predates the instance.** So the two artifacts anchor **different senses**:
+- Treating **v0.1.0's launch** as "the" Bitcoin — rather than the design, or another launch —
+  is itself a **convention**, not a derived fact. Even "pre‑genesis" for the November code is
+  defined *relative to* that popularly‑recognised block; it is a label, not neutral ground, so
+  it cannot *prove* the January anchor without circularity.
+- What is strictly **factual** is narrower: the pre‑release launched no running chain, and the
+  network the world calls Bitcoin began in January 2009. "The pre‑release is Bitcoin not yet
+  born" is a perfectly coherent reading — it simply places the design before the instance.
 
-- **Type / design** (the abstract concept) → the **whitepaper + the pre‑release**, the earlier
-  sources; here November is legitimately the *more original*.
-- **Instance** (the running system — genesis, ledger, network, unit, asset) → **v0.1.0's
-  genesis**, *necessarily*, because that is when it came into being.
-
-The pre‑release is *Bitcoin's design before launch*; it is not, and cannot be, the launched
-instance. Any sense of "Bitcoin" that has a genesis, a ledger, a network, or a unit is a
-January fact — by existence, not by ranking.
+So the split is by sense: **type/design → the whitepaper (+ the earlier pre‑release), the
+non‑circular invariant; instance → the conventionally‑recognised genesis‑rooted family.** The
+design is the fixed point everyone shares; *which launch — and, as §5 shows, which numbers —
+count as "Bitcoin" is convention.*
 
 ## 5. What a "satoshi" is
 
@@ -106,19 +107,23 @@ The code names **neither** "satoshi" **nor** "bitcoin." What
 The words are conventions layered on afterward (the code's own identifier is `COIN`; "satoshi"
 is a ~2010–11 coinage). So, precisely:
 
-> **A satoshi is the atomic, indivisible integer unit of the ledger's value field (`nValue`); a
-> bitcoin is 10⁸ of them (the code's `COIN`).** The *referents* — the atomic unit, the
-> aggregate, and the 10⁸ ratio — are artifact‑fixed; the *names* are convention.
+> **A satoshi is the atomic, indivisible integer unit of the ledger's value field (`nValue`).**
+> That there *is* such an atomic unit, and an aggregate `COIN` above it, is artifact‑fixed and
+> common to both codebases. **The ratio between them is not.**
 
-This 10⁸ is specifically a **January (v0.1.0)** fact: November's `COIN` was **10⁶**, so the
-atomic‑unit‑to‑coin ratio there was 10⁻⁶. **The "10⁻⁸ satoshi" does not exist in the
-pre‑release at all** — it is a different unit. Far from an arbitrary preference for v0.1.0, the
-satoshi is *forced* to be a genesis‑era fact: it is the only place it exists (see §4's
-type‑vs‑instance note).
+The ratio is **convention‑relative**, and the pre‑release is the live proof: nov08's `COIN` is
+**10⁶**, v0.1.0's is **10⁸**. So *"1 bitcoin = 10⁸ satoshi"* holds **only** if you anchor the
+unit to v0.1.0; anchor it to the pre‑release and *"1 bitcoin = 10⁶ satoshi"* is equally,
+internally correct. **There is no non‑circular way to prove 10⁸ over 10⁶** — the only thing
+that selects 10⁸ is that the world's "bitcoin" is the v0.1.0‑launched instance, which is a
+*social/historical convention* (the very "popularly known" one), not a fact derivable from the
+design.
 
-The symmetry with §4: this atomic‑unit + 10⁸‑ratio structure is **invariant across every
-genesis‑sharing fork** (all inherited it from the origin); only a specific *balance* is
-ledger‑relative. **The structure is universal; the instance is contingent.**
+So, precisely: the **atomic‑unit structure is universal** (both codebases have one); the
+**bitcoin↔satoshi ratio — and the names — are convention.** Across the *v0.1.0‑descended
+family* (BTC/BCH/BSV/XEC) the 10⁸ ratio is shared, because all inherited it from that one
+launch; step back to the pre‑release and it is not. **The satoshi is pinned only once you
+*choose* an anchor — and choosing is convention, not derivation.**
 
 ## 6. Using the vocabulary — the two examples, resolved
 
@@ -132,16 +137,21 @@ ledger‑relative. **The structure is universal; the instance is contingent.**
 
 ## 7. What is definitive, and what is not
 
-- **Definitive** (artifact‑fixed, shared by all): the one universal thing Bitcoin *is* — the
-  genesis‑rooted origin (whitepaper design + reference implementation) — and what a satoshi
-  *is* — the 10⁻⁸ atomic ledger unit.
-- **Not definitive, and honestly so**: which *live network* deserves the bare word. That is a
-  real branching in the world; no definition collapses it, and pretending to would be the very
-  overreach [`THESIS.md`](THESIS.md) disowns.
+- **Definitive** (non‑circular, needs no convention): the **design** (the whitepaper's
+  concept), which every version and descendant realises; and the **bare artifact facts** — the
+  pre‑release's `COIN` is 10⁶, v0.1.0's is 10⁸, v0.1.0's genesis is `000000000019d668…`, and
+  each ledger has an atomic indivisible unit.
+- **Not definitive, and honestly so**: which *live network* deserves the bare word; which
+  *codebase* defines "the" unit; and therefore the **bitcoin↔satoshi ratio itself** (10⁶ vs
+  10⁸) and whether "Bitcoin" primarily means the design or a particular instance. These are
+  real branchings and conventions in the world; no definition collapses them, and pretending to
+  would be the overreach [`THESIS.md`](THESIS.md) disowns.
 
-That distinction *is* the answer: a universal definitional core everyone shares, plus a
-vocabulary that makes the residual, genuinely‑social disagreement **locatable** rather than a
-source of people talking past each other while using the same word.
+That distinction *is* the answer: a **non‑circular core** (the design + the artifact facts)
+everyone can share, plus a vocabulary that makes the residual, genuinely‑conventional choices —
+the network, the unit anchor, the ratio — **locatable and explicit** rather than smuggled in as
+if they were fundamental. The reflex to treat "1 satoshi = 10⁻⁸ bitcoin" as bedrock is exactly
+such a smuggle: it is true *by convention* (the v0.1.0 instance), not by derivation.
 
 ## Boundary
 
