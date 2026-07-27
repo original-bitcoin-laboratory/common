@@ -6,7 +6,7 @@ executable** reconstruction and **neutral conformance study** of the earliest Bi
 grounded in two **hash‑verified archives + the whitepaper** — the sole authority
 ([`AUTHORITY.md`](AUTHORITY.md)) — and re‑derived here, independent of any outside account.
 
-**How to check any of it:** `python genesis/scripts/reproduce.py` — **18 steps, 265 tests**,
+**How to check any of it:** `python genesis/scripts/reproduce.py` — **18 steps, 359 tests**,
 all green; it re‑runs every suite and regenerates the derived matrices from source. Evidence
 is labelled on a ladder: *declared → implemented → reachable → consensus‑relevant → executed
 → mined → wallet‑exposed*. The strongest rung, **JAN09‑EXECUTED**, is the original
@@ -33,7 +33,7 @@ divergences on the same engine:
 
 | Face | Origin | Later | Executed proof |
 |---|---|---|---|
-| **Vocabulary** | full opcode set, only `OP_NOTEQUAL` off | broad set disabled 2010 | the neutral matrix ([`conformance/MATRIX.md`](conformance/MATRIX.md)) |
+| **Vocabulary** | full opcode set, only `OP_NOTEQUAL` off | broad set disabled 2010 | the neutral matrix ([`genesis/derivatives/conformance/`](../genesis/derivatives/conformance/)) |
 | **Arithmetic** | unbounded OpenSSL `BIGNUM` | bounded `CScriptNum` | MODEL == C++/OpenSSL PORT, 63 vectors |
 | **Values** | no `MoneyRange` (only `nValue<0`) | overflow check, Aug 2010 | [`overflow/`](../genesis/derivatives/overflow/) — v0.1 accepts the block‑74638 tx; hardened rejects |
 | **Resources** | no element/op/stack ceilings | 520 B / 201 / 1000, 2010 | [`script_limits/`](../genesis/derivatives/script_limits/) — v0.1 validates a 600 B element / 250 ops / 1500 stack; hardened rejects |

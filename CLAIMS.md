@@ -38,16 +38,17 @@ uniformly:
 
 | Descendant | Status | How |
 |---|---|---|
-| **BTC** | **executed** | `python-bitcoinlib` (independent impl) |
-| **BSV** | **executed** | `bitcoinx` (independent BSV impl) |
-| **BCH**, **XEC** | **documented** | that chain's own consensus spec, same method |
-| any other (LTC, DOGE, …) | **addable** | drop in its rules / an installable impl |
+| **BTC, LTC, DOGE** | **executed** | `python-bitcoinlib` — they run Bitcoin Core's `script.cpp` engine verbatim (forks changed PoW/supply/timing, not the interpreter) |
+| **BSV** | **executed** | `bitcoinx` (independent BSV impl, backed by real libsecp256k1) |
+| **BCH, XEC** | **execution‑bounded** | no standalone BCH/eCash interpreter exists, so each cell is pinned between two independent executions (restored ops confirmed executable, disabled ops confirmed disabled) |
+| any other | **addable** | drop in its rules / an installable impl, on the same footing |
 
-So the honest phrasing is *"a neutral, extensible conformance matrix — two chains
-cross‑checked by execution today, the rest documented under the same method, and any
+So the honest phrasing is *"a neutral, extensible conformance matrix — six chains resolved
+today (four cross‑checked by execution, two execution‑bounded), under one method, any
 candidate addable on the same footing"* — **not** "every descendant." Coverage grows as
 independent implementations are installed; the *method* is what's uniform, and no chain is
-privileged (including our own NOV08‑X/JAN09‑X).
+privileged (including our own NOV08‑X/JAN09‑X). The BCH/XEC bound is stated plainly rather
+than dressed up as a single‑interpreter run we cannot do.
 
 ## What we do NOT claim
 

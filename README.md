@@ -48,8 +48,9 @@ lets you re‑derive it from scratch on your own machine.
 The script engine (MODEL + C++ PORT), sighash, `OP_CHECKSIG`/`CHECKMULTISIG` on real
 secp256k1, native instruments (escrow / hash‑lock / assurance), a UTXO `ConnectInputs`/
 `ConnectBlock` ledger, a wallet, the P2P wire + chain sync, persistence, the neutral
-descendant matrix (BTC + BSV **executed**), the commerce subsystem (signed listings +
-atoms reputation), a script **debugger**, and a **full‑stack console** that drives it all.
+6‑chain descendant matrix (BTC/LTC/DOGE + BSV **executed**, BCH/XEC execution‑bounded), the
+commerce subsystem (signed listings + atoms reputation), a script **debugger**, and a
+**full‑stack console** that drives it all.
 Plus two live counterfactual networks — **NOV08‑X** and **JAN09‑X** — that mine, sync, and
 transact contracts BTC can't express, each with the full vocabulary and nothing disabled.
 
