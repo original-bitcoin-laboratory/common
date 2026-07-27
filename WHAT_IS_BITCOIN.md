@@ -153,6 +153,61 @@ the network, the unit anchor, the ratio — **locatable and explicit** rather th
 if they were fundamental. The reflex to treat "1 satoshi = 10⁻⁸ bitcoin" as bedrock is exactly
 such a smuggle: it is true *by convention* (the v0.1.0 instance), not by derivation.
 
+## 8. Can the definition be made *unique*? — the strongest counter‑questions
+
+Three natural pushes try to escape convention and pin a single, beyond‑doubt "Bitcoin." Each
+fails, and the primary artifacts say why.
+
+**Does the whitepaper itself define a selection principle?** It defines **exactly one** —
+proof‑of‑work: *"the longest chain, which has the greatest proof‑of‑work effort invested in
+it"* is treated as correct. But that selects among competing **block‑histories under one fixed
+rule set** (so double‑spends can't stand); it is **rule‑relative** — a node counts only work
+valid under *its own* rules. At a **hard fork**, where the rule sets themselves diverge, the two
+chains are mutually invalid and share no metric, so longest‑chain **cannot say which fork is
+"Bitcoin."** The paper has a selector for the *ledger tip*, and **none for identity.**
+("Most cumulative work across forks" is an *extrapolation* of the rule past where the paper
+applies it — a convention in whitepaper clothing.)
+
+**Is there a truer definition to switch to?** The two properties you'd want — *beyond doubt*
+and *uniquely identifying* — pull in **opposite** directions:
+
+| Definition (thin → thick) | Beyond doubt? | Uniquely identifies? |
+|---|---|---|
+| the **invention** — ledger consensus via PoW, no trusted third party | ✅ maximally | ❌ every PoW chain satisfies it |
+| the **whitepaper design** | ✅ | ❌ BTC/BCH/BSV all satisfy it |
+| **+ v0.1.0 reference** (Script set, `COIN`, consensus path) | ⚠️ carries contingent choices | ⚠️ discriminates, but the choices are contestable |
+| the **genesis‑rooted chain** | ⚠️ | ❌ forks → which branch? |
+| **most cumulative PoW / most‑adopted** | ❌ convention, time‑varying | ✅ but by popularity |
+
+**Thin = beyond doubt but many satisfiers; thick = discriminating but contestable.** No
+definition maximizes both — that is the whole trade, not a gap to close.
+
+**So can "Bitcoin" be defined *and* uniquely pointed to, beyond doubt?** Two walls, both
+*features* of the situation:
+
+- **Uniqueness wall** — a definition is a *predicate*; predicates have **many satisfiers**; the
+  artifacts contain **no identity‑selector** (above). So uniqueness of referent is *always*
+  convention.
+- **Completeness wall** — the design is an **incomplete specification** (it underdetermines
+  Script, the unit, addresses, block size, the exact hashing). To *run*, an implementation must
+  add contestable choices — so *"implement the design, nothing more"* is **unsatisfiable**: the
+  moment it runs it is an *instance carrying choices*, not the design itself.
+
+**The verdict, then, on "define it and point to / build it, beyond doubt":**
+
+- **Beyond doubt is reachable** for the **design** (the type) and for **unique origin
+  artifacts** — the hash‑verified v0.1.0 source and the genesis block `000000000019d668…`. You
+  *can* point, uniquely and beyond doubt, to **the origin.**
+- **Beyond doubt is *not* reachable** for a unique *"the Bitcoin"* (the ongoing network), nor
+  for a fundamental *bitcoin↔satoshi ratio* — the whitepaper defines no identity‑selector, and
+  a runnable build cannot be "only the design."
+
+So the honest terminus: fix the definition at the design (beyond doubt, non‑unique), point
+uniquely to the **origin** (beyond doubt), and — since no build can be "only the design" —
+realise it as an instance whose every added choice is **maximally faithful to the origin and
+disclosed as a choice** (see [`DEFINITIONAL_FIDELITY.md`](DEFINITIONAL_FIDELITY.md)). The
+demand for a unique, beyond‑doubt "the Bitcoin" is not met — and the whitepaper is the reason.
+
 ## Boundary
 
 Grounded only in the two hash‑verified origin artifacts ([`AUTHORITY.md`](AUTHORITY.md)); the
