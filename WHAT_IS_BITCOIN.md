@@ -208,6 +208,51 @@ realise it as an instance whose every added choice is **maximally faithful to th
 disclosed as a choice** (see [`DEFINITIONAL_FIDELITY.md`](DEFINITIONAL_FIDELITY.md)). The
 demand for a unique, beyond‑doubt "the Bitcoin" is not met — and the whitepaper is the reason.
 
+## 9. Does what Bitcoin *is* change over time?
+
+Yes — but only for some senses, and the split is the same seam as everywhere else.
+
+- **The origin does not change — ever.** The whitepaper is a frozen document; v0.1.0 is a
+  hash‑verified frozen artifact; the genesis block `000000000019d668…` is fixed. These are
+  *history*, and history does not change. **Bitcoin‑the‑design and the origin artifacts are
+  timeless.**
+- **The live‑network senses do change** — the current *rules*, the *network*, the growing
+  *ledger*, and hence the *asset*. They are set by **ongoing social consensus**, which is
+  mutable.
+
+So *proof‑of‑work / longest‑chain* has two statuses at once: **as a design element** (in the
+paper) it is fixed forever; **as a live‑network rule** it is mutable — real chains have changed
+consensus rules over time (BTC added BIP66 / SegWit / Taproot; Bitcoin Cash changed its
+difficulty algorithm repeatedly; Monero has changed its PoW algorithm), and a network *could*
+by consensus alter or even abandon PoW. The edge case is instructive: **if a live network
+drifts far enough — e.g. abandons PoW — it stops satisfying the whitepaper predicate and
+*exits the type*** (it is no longer design‑Bitcoin, whatever convention still calls it). So the
+design both stays still *and* is the ruler that detects when a network has changed out of the
+genus.
+
+Three consequences:
+
+1. **This is a decisive argument for the origin anchor.** A definition that changes whenever
+   the rules change is not a definition of a fixed thing — it is a *description of whatever
+   consensus currently endorses*. The origin is the **only temporally‑stable anchor**; anchor
+   to "the current network" and the definition must be re‑issued at every fork.
+2. **The origin is what makes "Bitcoin changed" *sayable*.** Change is measurable only against
+   something fixed — *changed relative to what?* — and that frame is the origin. The lab's
+   "measure everyone from the origin" gains a **time axis**: drift across forks *and* across
+   years becomes measurable only in that frame.
+3. **A network's sameness over its own history is convention.** Replace the rules upgrade by
+   upgrade (the ship of Theseus, plank by plank) and whether it is "the same Bitcoin" has **no
+   fact of the matter** — the branching problem in *time*, resolved only by convention.
+
+(One distinction: the ledger also "changes" merely by **growing** — append‑only, past‑immutable.
+That monotonic growth is a different thing from the **rules themselves mutating**; only the
+latter is the convention‑governed change in question.)
+
+**Upshot:** *what Bitcoin **is** is time‑invariant only at the origin (design + v0.1.0 +
+genesis); every live‑network definition is a moving target set by ongoing convention.* If you
+want a definition that holds beyond doubt *and* does not drift, you are forced back to the
+frozen origin — the one thing that reads identically in 2008, 2026, and 2100.
+
 ## Boundary
 
 Grounded only in the two hash‑verified origin artifacts ([`AUTHORITY.md`](AUTHORITY.md)); the
