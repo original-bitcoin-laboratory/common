@@ -39,6 +39,10 @@ Cluster Mempool). This inventory is consensus/anti‑DoS bounds; the one policy 
 | **Script element‑size limit** — no 520‑byte push cap (`MAX_SCRIPT_ELEMENT_SIZE`) | anti‑DoS | ❌ | 2010 script hardening |
 | **Script op‑count limit** — no ~201‑op ceiling | anti‑DoS | ❌ | 2010 script hardening |
 | **Stack‑size cap** — no 1000‑element ceiling (only *underflow* guards `if (stack.size() < N)`) | anti‑DoS | ❌ | 2010 script hardening |
+
+These three script ceilings are **executed** — the lab's real v0.1 interpreter validates
+scripts with a 600‑byte element, 250 ops, and a 1500‑deep stack, each of which the 2010 rule
+rejects: [`../../genesis/derivatives/script_limits/`](../../genesis/derivatives/script_limits/).
 | **Signature‑op count** — no `MAX_BLOCK_SIGOPS` per‑block limit | anti‑DoS | ❌ | 2010 |
 | **Standardness** — no `IsStandard` | *policy* | ❌ | 2010 (node‑local policy, not consensus) |
 
