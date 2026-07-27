@@ -36,6 +36,12 @@ lets you re‑derive it from scratch on your own machine.
   ~2010; BCH restored a subset; BSV restored nearly all (minus `OP_2MUL`/`OP_2DIV`). Only the
   origin carries the *literal* complete set — and v0.1 disabled exactly **one** functional
   opcode (`OP_NOTEQUAL`).
+- **The origin was a working engine with the guardrails not yet installed** — no value‑overflow
+  check, no block‑size cap, no script resource limits (all added in 2010). The two sharpest are
+  *executed* as accept/reject divergences. Plus the attack‑surface maps: OpenSSL and Berkeley DB
+  each once forked the chain; ECDSA/secp256k1 is the shared post‑quantum exposure.
+
+**→ The full synthesis is [`FINDINGS.md`](FINDINGS.md)** — one page tying every result together.
 
 ## What's built (all headless, all tested)
 
@@ -58,7 +64,7 @@ python genesis/scripts/verify_genesis.py   # both experimental genesis blocks re
 
 | Repo | What |
 |---|---|
-| [`common/`](.) (this one) | umbrella: [`CLAIMS.md`](CLAIMS.md), [`AUTHORITY.md`](AUTHORITY.md), [`ROADMAP.md`](ROADMAP.md), the NOV08→JAN09 diff, the NOV08‑X design ledger |
+| [`common/`](.) (this one) | umbrella: [`FINDINGS.md`](FINDINGS.md), [`CLAIMS.md`](CLAIMS.md), [`AUTHORITY.md`](AUTHORITY.md), [`ROADMAP.md`](ROADMAP.md), the conformance/attack‑surface matrices, the NOV08‑X design ledger |
 | `pre-genesis/` | **OBL‑NOV08** — the Nov 15 2008 pre‑release witness + inventory |
 | `genesis/` | **OBL‑JAN09** — Bitcoin v0.1.0: the full executable reconstruction + derivatives |
 

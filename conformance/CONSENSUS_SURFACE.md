@@ -23,12 +23,18 @@ Cluster Mempool). This inventory is consensus/anti‑DoS bounds; the one policy 
 |---|---|---|---|
 | PoW difficulty retarget — 2‑week window, `nInterval = 2016`, clamp [¼×, 4×] | consensus | ✅ | `main.cpp:687‑711` |
 | Coinbase maturity — `COINBASE_MATURITY = 100` | consensus | ✅ | `main.h:20` |
-| Median‑time‑past timestamp rule | consensus | ✅ | `main.h:1086` |
-| Transaction finality — `IsFinal` / `nLockTime` | consensus | ✅ | `main.h:226`, `main.h:363` |
+| Median‑time‑past timestamp rule (+ CheckBlock future‑2h) | consensus | ✅ **executed** | `main.h:1086`, `main.cpp:1164`,`1206` |
+| Transaction finality — `IsFinal` / `nLockTime` (**height‑only**, no time threshold) | consensus | ✅ **executed** | `main.h:226`, `main.h:363` |
 | Chain reorganization — `Reorganize` (disconnect/reconnect) | consensus | ✅ | `main.cpp` (11 refs) |
 | Merkle‑root binding — `BuildMerkleTree` | consensus | ✅ | `main.cpp:1186` |
 | Serialization size cap — `MAX_SIZE = 0x02000000` (32 MB) | anti‑DoS | ✅ | `main.h:17` |
 | Reject **negative** output values (`nValue < 0`) | consensus | ✅ (partial — see B) | `main.h:442` |
+
+The temporal rows are **executed** — median‑time‑past, the two block‑timestamp checks, and
+transaction finality (with v0.1's **height‑only** `nLockTime`) run in
+[`../../genesis/derivatives/temporal/`](../../genesis/derivatives/temporal/). Difficulty
+retarget, merkle, subsidy and coinbase maturity are executed in the C++/OpenSSL PORT
+(`genesis/derivatives/node/`) and the ledger; reorg in chain‑sync/persist.
 
 ### B. Absent in v0.1 — the bounds that came later (the sharp findings)
 
