@@ -20,7 +20,39 @@ origin**: under `nov08`, `NOV08‑X` measures distance **0**; under `v0.1.0`, `J
 with their distances shown and let **adoption — which is convention — decide.** That is
 exactly "the world decides."
 
-## Three senses of "release" — only two are safe
+## "A Bitcoin," not "the Bitcoin" — and why that makes them equal contenders
+
+The claim is deliberately *"a Bitcoin,"* never *"the Bitcoin."* Because no fact selects a unique
+referent (WHAT_IS_BITCOIN §3), **every instance — BTC, BSV, NOV08‑X, JAN09‑X — is a candidate,
+and none is privileged by fact.** They are equal contenders in the only sense that isn't
+convention: *no fact ranks them.*
+
+They stand as **different *kinds* of candidate — and that is *why* they're equal**:
+
+- **BTC / BSV are continuity candidates** — branches of the actually‑launched chain (they trace
+  to genesis `000000000019d668`). Claim: *"I am what that chain became."*
+- **NOV08‑X / JAN09‑X are fidelity candidates** — new instances (own genesis) that re‑realise
+  the origin's constitution *undrifted* (JAN09‑X is distance 1 from v0.1.0; BTC is 9). Claim:
+  *"I am what that design specifies."*
+
+Neither claim is a fact — *which* lens (continuity vs fidelity) counts is the **contextual
+choice**, and choosing is convention. So the reconstructions stand as equal contenders
+**precisely because the definition is ambiguous**: pick continuity and BTC/BSV lead; pick
+fidelity and the reconstructions lead. The origin‑distance tracker
+([`genesis/derivatives/tracker/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/tracker/))
+shows both directions.
+
+## Equal *contender* ≠ equal *access* — the parity ladder
+
+"Equal contender" is a claim about **definition**; *"as openly accessible as a BTC or a BSV"* is
+a claim about **infrastructure** — not the same thing. The definitional equality is real now;
+the accessibility equality is a ladder (which is exactly the "three senses" below): publishing
+gives **inspect‑parity** immediately, a hardened joinable network gives **network‑parity**, and
+trading as money is the rung that stays off. Even BTC/BSV's *money* status is **market
+convention, not fidelity** — so "not tradable" makes the reconstructions less *commercialised*,
+never lesser *contenders*.
+
+## Three senses of "release" — the accessibility‑parity ladder (only two are safe)
 
 | Release | What it is | Verdict |
 |---|---|---|
@@ -54,6 +86,11 @@ Two different permanences, and only one is in your gift:
   is precisely what "let the world decide" means.
 
 ## If it goes live (path B), the non‑negotiables
+
+The concrete engineering plan — the MODEL→joinable‑node gap, a staged roadmap, and *why the
+non‑monetary status is what makes the origin's "nothing disabled" safe to run publicly* — is
+[`genesis/docs/PUBLIC_TESTNET_SCOPE.md`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/docs/PUBLIC_TESTNET_SCOPE.md).
+The non‑negotiables:
 
 - **Stamped "not money"** everywhere — no premine, no sale, no yield, no price talk.
 - **Hardened first** — a production node with real proof‑of‑work and a security review; the
