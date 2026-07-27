@@ -32,7 +32,7 @@ Cluster Mempool). This inventory is consensus/anti‑DoS bounds; the one policy 
 
 The temporal rows are **executed** — median‑time‑past, the two block‑timestamp checks, and
 transaction finality (with v0.1's **height‑only** `nLockTime`) run in
-[`../../genesis/derivatives/temporal/`](../../genesis/derivatives/temporal/). Difficulty
+[`genesis/derivatives/temporal/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/temporal/). Difficulty
 retarget, merkle, subsidy and coinbase maturity are executed in the C++/OpenSSL PORT
 (`genesis/derivatives/node/`) and the ledger; reorg in chain‑sync/persist.
 
@@ -45,12 +45,12 @@ retarget, merkle, subsidy and coinbase maturity are executed in the C++/OpenSSL 
 | **Script element‑size limit** — no 520‑byte push cap (`MAX_SCRIPT_ELEMENT_SIZE`) | anti‑DoS | ❌ | 2010 script hardening |
 | **Script op‑count limit** — no ~201‑op ceiling | anti‑DoS | ❌ | 2010 script hardening |
 | **Stack‑size cap** — no 1000‑element ceiling (only *underflow* guards `if (stack.size() < N)`) | anti‑DoS | ❌ | 2010 script hardening |
-
-These three script ceilings are **executed** — the lab's real v0.1 interpreter validates
-scripts with a 600‑byte element, 250 ops, and a 1500‑deep stack, each of which the 2010 rule
-rejects: [`../../genesis/derivatives/script_limits/`](../../genesis/derivatives/script_limits/).
 | **Signature‑op count** — no `MAX_BLOCK_SIGOPS` per‑block limit | anti‑DoS | ❌ | 2010 |
 | **Standardness** — no `IsStandard` | *policy* | ❌ | 2010 (node‑local policy, not consensus) |
+
+The element/op/stack ceilings are **executed** — the lab's real v0.1 interpreter validates
+scripts with a 600‑byte element, 250 ops, and a 1500‑deep stack, each of which the 2010 rule
+rejects: [`genesis/derivatives/script_limits/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/script_limits/).
 
 ## The sharpest one, in the origin's own words
 
@@ -72,7 +72,7 @@ v0.1 source. Same for the 1 MB block cap and every Script resource limit: **not 
 
 This one is **executed** — a faithful port of this rule and the 2010 fix, run on the exact
 block‑74638 amounts, showing v0.1 accept while the hardened rule rejects:
-[`../../genesis/derivatives/overflow/`](../../genesis/derivatives/overflow/).
+[`genesis/derivatives/overflow/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/overflow/).
 
 ## The through‑line
 

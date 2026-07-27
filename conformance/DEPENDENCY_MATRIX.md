@@ -36,8 +36,8 @@ from consensus**:
 
 - **OpenSSL (crypto) → the July 2015 BIP66 fork.** Lenient, version‑dependent signature
   parsing → a ~6‑block split. Fixed by strict‑DER + moving to **libsecp256k1**
-  (see `../../genesis/inventory/THE_OPENSSL_THREAD.md`, executed in
-  `../../genesis/derivatives/crypto_conformance/`).
+  (see `genesis/inventory/THE_OPENSSL_THREAD.md`, executed in
+  `genesis/derivatives/crypto_conformance/`).
 - **Berkeley DB (storage) → the March 2013 fork.** Berkeley DB's default lock limit
   couldn't process a large block, so v0.7 (BDB) nodes rejected a block v0.8 (LevelDB)
   accepted → a ~24‑block split, resolved by miners downgrading. It **triggered the move to

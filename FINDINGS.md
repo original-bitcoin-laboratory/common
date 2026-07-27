@@ -21,8 +21,8 @@ inception it shipped: the **full Script vocabulary** (106 opcodes, 94 implemente
 `OP_NOTEQUAL` disabled**), a **UTXO state machine**, **all SIGHASH modes**, and even an
 **off‑chain marketplace** (`market.cpp`: signed products/reviews, a web‑of‑trust reputation
 system). The programmability critics say Bitcoin "never had" was **native at the origin**
-(executed: [`genesis/derivatives/model/`](../genesis/derivatives/model/),
-[`ledger/`](../genesis/derivatives/ledger/), [`market/`](../genesis/derivatives/market/)).
+(executed: [`genesis/derivatives/model/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/model/),
+[`ledger/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/ledger/), [`market/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/market/)).
 
 ## 2. The through‑line — a working engine with the guardrails not yet installed
 
@@ -33,15 +33,15 @@ divergences on the same engine:
 
 | Face | Origin | Later | Executed proof |
 |---|---|---|---|
-| **Vocabulary** | full opcode set, only `OP_NOTEQUAL` off | broad set disabled 2010 | the neutral matrix ([`genesis/derivatives/conformance/`](../genesis/derivatives/conformance/)) |
+| **Vocabulary** | full opcode set, only `OP_NOTEQUAL` off | broad set disabled 2010 | the neutral matrix ([`genesis/derivatives/conformance/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/conformance/)) |
 | **Arithmetic** | unbounded OpenSSL `BIGNUM` | bounded `CScriptNum` | MODEL == C++/OpenSSL PORT, 63 vectors |
-| **Values** | no `MoneyRange` (only `nValue<0`) | overflow check, Aug 2010 | [`overflow/`](../genesis/derivatives/overflow/) — v0.1 accepts the block‑74638 tx; hardened rejects |
-| **Resources** | no element/op/stack ceilings | 520 B / 201 / 1000, 2010 | [`script_limits/`](../genesis/derivatives/script_limits/) — v0.1 validates a 600 B element / 250 ops / 1500 stack; hardened rejects |
+| **Values** | no `MoneyRange` (only `nValue<0`) | overflow check, Aug 2010 | [`overflow/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/overflow/) — v0.1 accepts the block‑74638 tx; hardened rejects |
+| **Resources** | no element/op/stack ceilings | 520 B / 201 / 1000, 2010 | [`script_limits/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/script_limits/) — v0.1 validates a 600 B element / 250 ops / 1500 stack; hardened rejects |
 
 The **present machinery** v0.1 *did* ship is executed too: difficulty retarget, merkle,
 subsidy and coinbase maturity (PORT + ledger); reorg (chain‑sync/persist); and the temporal
 rules — median‑time‑past, the two block‑timestamp checks, and transaction finality —
-in [`temporal/`](../genesis/derivatives/temporal/), which surfaces that v0.1's `nLockTime` is
+in [`temporal/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/temporal/), which surfaces that v0.1's `nLockTime` is
 **height‑only** (no time/height `LOCKTIME_THRESHOLD`; that split is a later refinement). The
 full map: [`conformance/CONSENSUS_SURFACE.md`](conformance/CONSENSUS_SURFACE.md).
 
@@ -81,7 +81,7 @@ immature 2009–10 code; the lab's claim is not that anything was sinister — i
 
 ## 6. The counterfactuals — "nothing disabled," realised
 
-[`NOV08‑X`](../genesis/derivatives/nov08x/) and [`JAN09‑X`](../genesis/derivatives/jan09x/)
+[`NOV08‑X`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/nov08x/) and [`JAN09‑X`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/jan09x/)
 carry the **complete original vocabulary live**, each under its own constitution (November's
 design vs January's release), as **two isolated networks that synchronise end‑to‑end**. They
 are explicitly **not** "true Bitcoin": distinct genesis/magic/ports, **units are not

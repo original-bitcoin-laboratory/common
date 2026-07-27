@@ -42,11 +42,11 @@ choice is one of:
 
 | Decision | Choice | Class | Why it's honest |
 |---|---|---|---|
-| Script engine | the lab's full‑vocabulary EvalScript (`../../genesis/derivatives/model`) | N‑IFACE | November *references* `CScript`/`OP_CHECKSIG`; we reconstruct from that interface, disabling nothing (Nov predates the Script file that disabled `OP_NOTEQUAL`) |
+| Script engine | the lab's full‑vocabulary EvalScript (`genesis/derivatives/model`) | N‑IFACE | November *references* `CScript`/`OP_CHECKSIG`; we reconstruct from that interface, disabling nothing (Nov predates the Script file that disabled `OP_NOTEQUAL`) |
 | keys / sighash | real secp256k1 + pre‑BIP143 SignatureHash | N‑IFACE | implied by `<pubkey> OP_CHECKSIG` |
-| storage | `CDiskBlockIndex` model (`../../genesis/derivatives/persist`) | J‑DONOR | November is silent; January's form, labelled |
+| storage | `CDiskBlockIndex` model (`genesis/derivatives/persist`) | J‑DONOR | November is silent; January's form, labelled |
 | commerce | `CProduct`/`CReview`/atoms (R6) | J‑DONOR | shipped in v0.1; November had no commerce files — importing it is an explicit counterfactual choice |
-| network identity | new genesis/magic/ports (`../../genesis/derivatives/nov08x/net.py`) | NEW‑EXP | a new experimental chain, never mainnet |
+| network identity | new genesis/magic/ports (`genesis/derivatives/nov08x/net.py`) | NEW‑EXP | a new experimental chain, never mainnet |
 
 The single hard rule (from the ledger): **a J‑DONOR/NEW‑EXP import may never silently
 overwrite an N‑ORIG rule.** Where November specifies behaviour (its monetary

@@ -86,4 +86,4 @@ Objective protocol/math analysis + source‑verified facts from this repo (bare�
 v0.1.0). No external references, no live exploit, no chain privileged — the exposure applies
 identically to any lineage holding exposed‑key outputs. Cross‑ref: the quantum cell in
 [`DEPENDENCY_MATRIX.md`](DEPENDENCY_MATRIX.md); the executed ECDSA cross‑check in
-[`../../genesis/derivatives/crypto_conformance/`](../../genesis/derivatives/crypto_conformance/).
+[`genesis/derivatives/crypto_conformance/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/crypto_conformance/).
