@@ -239,7 +239,10 @@ Three consequences:
 2. **The origin is what makes "Bitcoin changed" *sayable*.** Change is measurable only against
    something fixed — *changed relative to what?* — and that frame is the origin. The lab's
    "measure everyone from the origin" gains a **time axis**: drift across forks *and* across
-   years becomes measurable only in that frame.
+   years becomes measurable only in that frame. This is *executed* in
+   [`genesis/derivatives/tracker/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/tracker/)
+   — given a date, it reports each claimant's neutral distance from v0.1.0 (BTC drifts to 7 of
+   9 axes by 2016; BSV's 2020 restore moves it *back*; only the lab's reconstruction sits at 0).
 3. **A network's sameness over its own history is convention.** Replace the rules upgrade by
    upgrade (the ship of Theseus, plank by plank) and whether it is "the same Bitcoin" has **no
    fact of the matter** — the branching problem in *time*, resolved only by convention.
