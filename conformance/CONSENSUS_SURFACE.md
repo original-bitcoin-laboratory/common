@@ -60,6 +60,10 @@ sum past the wrap point. This surface existed continuously from the origin until
 patched (Aug 2010) — the check that closes it, `MoneyRange`, has **0 occurrences** in the
 v0.1 source. Same for the 1 MB block cap and every Script resource limit: **not yet written.**
 
+This one is **executed** — a faithful port of this rule and the 2010 fix, run on the exact
+block‑74638 amounts, showing v0.1 accept while the hardened rule rejects:
+[`../../genesis/derivatives/overflow/`](../../genesis/derivatives/overflow/).
+
 ## The through‑line
 
 The lab has now mapped three sides of the same maturation:
