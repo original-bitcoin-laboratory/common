@@ -59,7 +59,8 @@ than dressed up as a single‑interpreter run we cannot do.
 - ❌ *A better financial system than BTC/BCH/BSV/XEC/LTC/DOGE* — they are hardened,
   economically‑live networks; this is a MODEL‑level research lab.
 - ❌ Anything about **money/value** — the experimental chains are stamped "not money";
-  no premine, no sale, no promises.
+  no premine, no sale, no value assigned, no promises. The maintainers solicit no market; whether
+  third parties value the units is outside any software's control, but nothing in the design invites it.
 
 ## Why the hedged claim is stronger
 

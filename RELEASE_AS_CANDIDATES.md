@@ -92,7 +92,9 @@ non‑monetary status is what makes the origin's "nothing disabled" safe to run 
 [`genesis/docs/PUBLIC_TESTNET_SCOPE.md`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/docs/PUBLIC_TESTNET_SCOPE.md).
 The non‑negotiables:
 
-- **Stamped "not money"** everywhere — no premine, no sale, no yield, no price talk.
+- **Stamped "not money"** everywhere — no premine, no sale, no yield, no price talk. The maintainers
+  assign the units no value and solicit no market; mining issues valueless experimental units, and
+  whether third parties value them is outside any software's control, but nothing in the design invites it.
 - **Hardened first** — a production node with real proof‑of‑work and a security review; the
   MODEL is a research microscope, not a validator for value.
 - **Distinct identity** — its own genesis/magic/ports; **units are not satoshis**; no inherited

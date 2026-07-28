@@ -19,7 +19,7 @@ definition of what "Bitcoin" (and a "satoshi") *is*, argued from the artifacts.
 > method.
 >
 > It is a **research microscope, not a coin.** The experimental chains are stamped *"not
-> money"*: no premine, no sale, no promises.
+> money"*: no premine, no sale, no value assigned, no promises — the maintainers solicit no market.
 
 ## What we found
 
@@ -52,8 +52,8 @@ definition of what "Bitcoin" (and a "satoshi") *is*, argued from the artifacts.
 The script engine (MODEL + C++ PORT), sighash, `OP_CHECKSIG`/`CHECKMULTISIG` on real
 secp256k1, native instruments (escrow / hash‑lock / assurance), a UTXO `ConnectInputs`/
 `ConnectBlock` ledger, a wallet, the P2P wire + chain sync, persistence, the neutral
-6‑chain descendant matrix (BTC/LTC/DOGE + BSV **executed**, BCH/XEC execution‑bounded), the
-commerce subsystem (signed listings + atoms reputation), a script **debugger**, and a
+6‑chain descendant matrix (BTC/LTC/DOGE + BSV **executed**, BCH/XEC execution‑bounded), a
+model of v0.1's commerce subsystem (signed listings + atoms reputation), a script **debugger**, and a
 **full‑stack console** that drives it all.
 Plus two live counterfactual networks — **NOV08‑X** and **JAN09‑X** — that mine, sync, and
 transact contracts BTC can't express, each with the full vocabulary and nothing disabled.
