@@ -35,6 +35,34 @@ The whole argument turns on not conflating these:
 **The origin was more complete in *design* and less safe in *implementation*.** Both are true;
 neither cancels the other. Every over‑reach below comes from collapsing these two layers.
 
+## Valuelessness is load‑bearing — and what that means for the live reconstructions
+
+The second layer has a direct consequence. The origin ran **without** `MoneyRange`, without a
+block‑size cap, without script resource limits — guardrails added from 2010 for real reasons.
+Reconstructing the origin faithfully therefore means running **without** those guardrails, and that
+is defensible **only** while the units carry no value: *"nothing disabled" is safe precisely because
+there is nothing of value to steal.* Attach value and the same unguarded rules become a liability you
+must defend — forcing the modern guardrails back in, at which point **it is no longer the origin.**
+So the valuelessness is not a disclaimer bolted on; it is the **condition under which a faithful,
+unguarded reconstruction can exist at all** — no premine, no sale, no assigned value, no solicited
+market, stamped in the coinbase.
+
+The two live reconstructions — **NOV08‑X** and **JAN09‑X** — are launched, operational, and joinable:
+always‑on anchors, two independent client implementations (Python and Rust), reproducible genesis,
+signed releases, a seed, one‑command Docker. Anyone can run a node and join. On the axis the lab
+measures — **origin‑fidelity** — they are the reference‑closest (from the v0.1.0 origin, `JAN09‑X` = 1;
+from the Nov‑2008 origin, `NOV08‑X` = 0), by construction at least as faithful to the earliest Bitcoin
+as any live chain.
+
+What they are **not** — and do not try to become — is "equal to" BTC/BCH/BSV as *secured, adopted,
+monetary* networks. Those chains lead on hashpower, market, and adoption because they carry value;
+this project carries none by design, and competing there would require attaching value, which un‑does
+the reconstruction. Where the lab is at‑par‑or‑better, and where it puts its effort, is the axis it
+actually measures: **fidelity to the origin, reproducibility, and honest neutrality** — kept
+razor‑sharp. Participation is invited, not manufactured: anyone may join; whether others do is the
+community's part, not something the lab stages. Best‑in‑class at *fidelity and honesty* is the real,
+durable win — "the next Bitcoin" is the claim we keep declining.
+
 ## On the origin artifacts — the "most fundamental primitive" question, honestly
 
 Anchoring on the **Nov 2008 pre‑release source** and the **whitepaper** is a *defensible
@@ -72,6 +100,10 @@ not pretend it is:
 - ❌ **Any unfalsifiable superlative** ("the only," "the most secure in the world," "what
   everyone missed"). Precision is the moat; superlatives invite easy rebuttal and read as
   marketing.
+- ❌ **"These networks are, or should become, at par with BTC/BCH/BSV as secured/adopted money."**
+  They carry no value by design; matching value‑driven chains on hashpower or market would require
+  attaching value, which re‑forces the guardrails and un‑does the reconstruction (see above). The
+  lab competes on fidelity, reproducibility, and neutrality — never on metrics that presuppose value.
 
 ## What we DO put out
 
