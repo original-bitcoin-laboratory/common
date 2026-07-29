@@ -118,6 +118,29 @@ different thing, and should say which.
   outside this frame entirely.
 - ❌ *That anyone must adopt it.* Adoption is social; the claim is definitional.
 
+## Network parameters vs. consensus fidelity (why the live nets mine "easy")
+
+One divergence deserves an explicit line so it is never mistaken for a fidelity gap: the live
+experimental networks **NOV08‑X / JAN09‑X mine at regtest‑easy difficulty** with a short block
+spacing, whereas the unmodified 2009 client and the reproduced historical genesis run at the
+**real** difficulty (`0x1d00ffff`). This is deliberate, disclosed, and **confined**:
+
+- It is a **network/operational parameter, not a change to any consensus *rule*.** The retarget
+  *algorithm*, the proof‑of‑work *check*, the block structure, and the monetary rules are all
+  faithful; only the target *value* on the isolated toy net is set easy.
+- It is the choice **Bitcoin's own `regtest` makes**, for the same reasons: a valueless, isolated
+  network with one or two CPUs cannot sustain mainnet difficulty, and there is **nothing of value
+  to secure** (so PoW difficulty would buy nothing). It also keeps the experimental genesis
+  **deterministically re‑minable** — `verify_genesis.py` re‑derives it in a fraction of a second.
+- It **does not touch the fidelity claims.** Those rest on the real genesis `000000000019d668…`
+  and the consensus rule *content*, reproduced at real difficulty by the C++/OpenSSL port and the
+  unmodified binary — never on the easy toy nets. A live `min_bits` floor
+  (`derivatives/netnode/difficulty.py`) lets an operator require real work on an X‑network without
+  ever touching the faithful genesis.
+
+In short: **real binary / real genesis → real difficulty (faithful); the throwaway NEW‑EXP
+networks → easy difficulty (a disclosed operational choice, security‑irrelevant because valueless).**
+
 ## Boundary
 
 The definition is stated and defended, not assumed; the metric is source‑verified or executed;
