@@ -101,5 +101,5 @@ coin.
 ---
 
 *Reproduce:* `python genesis/scripts/reproduce.py`. *Authority:* the two hash‑verified
-archives + whitepaper ([`AUTHORITY.md`](AUTHORITY.md)). *License:* MIT © 2026 Parth Mauria
-Saxena for the lab tooling; the historical Bitcoin sources keep Satoshi's 2009 MIT notice.
+archives + whitepaper ([`AUTHORITY.md`](AUTHORITY.md)). *License:* MIT © 2026 parthod0x
+for the lab tooling (named copyright holder in `LICENSE`); the historical Bitcoin sources keep Satoshi's 2009 MIT notice.

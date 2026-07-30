@@ -97,4 +97,4 @@ authenticate; use the code to execute; measure everyone else neutrally, from the
 ## Licensing
 
 Original Bitcoin source retains Satoshi Nakamoto's 2009 MIT notices. New laboratory
-material is MIT © 2026 Parth Mauria Saxena.
+material is MIT © 2026 parthod0x (named copyright holder in `LICENSE`).
