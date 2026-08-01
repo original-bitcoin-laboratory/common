@@ -76,9 +76,10 @@ with a post‑quantum signature scheme rewrites exactly that one cell for every 
   a consensus hard change, and a migration problem, not a drop‑in.
 
 Objectively: the quantum row is a property of the **algorithm and the output format**, not
-of any one chain — the curve is classically strong and the hashing survives. The exposure
-concentrates exactly where a public key is visible, and this repo's source shows the origin
-put its earliest keys there in the clear.
+of any one chain — the curve is classically strong (best generic classical attack ~2¹²⁷·⁰³ — the
+endomorphism costs a ~0.79-bit tax, negligible; see [`CURVE_STRUCTURE.md`](CURVE_STRUCTURE.md)) and the
+hashing survives. The exposure concentrates exactly where a public key is visible, and this repo's
+source shows the origin put its earliest keys there in the clear.
 
 ## Boundary
 

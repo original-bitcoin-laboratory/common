@@ -65,6 +65,10 @@ point of *all* of them" is true — and it's the frontier post‑quantum cryptog
 
 This cell is made concrete — Shor vs Grover, which outputs expose their public keys, and why
 the origin's **bare‑P2PK** coins are the sharpest case — in [`QUANTUM_EXPOSURE.md`](QUANTUM_EXPOSURE.md).
+The curve's own classical structure — the derivable GLV endomorphism (a ~0.79‑bit tax, not a backdoor),
+the textbook safety checks, the one un‑derivable constant (the generator `G`), and the twist's
+point‑validation caveat — is derived from the published constants in
+[`CURVE_STRUCTURE.md`](CURVE_STRUCTURE.md).
 
 ## Boundary
 
