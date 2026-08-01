@@ -11,6 +11,12 @@ Objective source inspection only — no external references, no chain privileged
 means *not present in this repo's source*, i.e. attack surface / hardening‑timeline, **not** a
 claim of a live exploit today (most were fixed years ago).
 
+> This inventory maps the *bounds*. Its companion
+> [`CONSENSUS_BEHAVIORS.md`](CONSENSUS_BEHAVIORS.md) maps the *behaviors* — the specific v0.1 quirks
+> (CHECKMULTISIG off‑by‑one, `SIGHASH_SINGLE → 1`, merkle odd‑node duplication, the output‑sum
+> overflow, the retarget fencepost) that a faithful reconstruction must reproduce bug‑for‑bug, each
+> anchored to the source and to the OBL engine that executes it.
+
 ## The two halves
 
 **A method note first:** *consensus* rules decide which blocks are valid (every node must
