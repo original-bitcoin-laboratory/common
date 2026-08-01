@@ -19,8 +19,9 @@ derivable is a benign generator.**
 | 1 | **GLV endomorphism** — `β, λ` are the nontrivial cube roots of unity mod `p`/`n`, forced by the curve order (`j = 0`), not author-chosen | derive `β,λ` from `p,n`; `[λ]G == (β·Gx, Gy)`; `1+λ+λ² ≡ 0 (mod n)` | **derivable, holds** |
 | 2 | **Endomorphism tax** — the √6 rho speedup makes the best generic classical attack `~2¹²⁷·⁰³`, ~0.79 bit below NIST P-256 (`~2¹²⁷·⁸³`) | `½·log₂(π·n/2) − ½·log₂(6)` vs P-256's `−½·log₂(2)` | **0.79-bit tax, not a break** |
 | 3 | **Textbook safety** — `p` prime, `n` prime, cofactor 1, non-anomalous, MOV embedding degree > 200, `G` on curve | six checks | **all pass** |
-| 4 | **The trust atom** — `G` has no published NUMS derivation (`Gx ≠ sha256(seed) mod p`); the field prime's `977` is not minimal (`263`/`361` are smaller) | test obvious seeds; search smallest prime `c` | **G/977 un-derivable** |
+| 4 | **The trust atom** — `G` has no published NUMS derivation (`Gx ≠ sha256(seed) mod p`, exhaustively) | test obvious seeds + a wide counter sweep | **G un-derivable** |
 | 5 | **Twist** — small factors `{3², 13², 3319, 22639}` leak ~33 key bits to a non-validating implementation; large cofactor (~2²²⁰) prime | factor the twist order; verify it reconstructs exactly | **~33-bit leak; validate points** |
+| 6 | **`977` is forced, not chosen** — the smallest `c` giving prime `p`, `p≡3 (mod 4)`, `p≡1 (mod 3)`, and a **prime-order** curve (263 → composite order; 361 → `p≡2 mod 3`) | CM point-count (validated on secp256k1) over `c=1..1000` | **977 is minimal ⇒ forced** |
 
 ## What each means
 
@@ -37,8 +38,16 @@ derivable is a benign generator.**
   un-derivable constants with a hidden relation can hide one). The single un-derivable constant is the
   generator `G`, whose provenance must be trusted, not reproduced. For the discrete log this is benign —
   any generator of the prime-order group is equivalent — but it is the one irreducible trust atom under
-  the whole "verify" regress. (`977` is a lesser rigidity wrinkle: not the minimal NUMS constant, so its
-  choice reflects an unpublished extra constraint — prime curve order + fast reduction.)
+  the whole "verify" regress.
+
+- **(6) The `977` field constant is *forced*, not chosen — the wrinkle inverts.** `977` is not the
+  minimal prime constant (`263` is), which looked like unexplained rigidity. But a self-contained CM
+  point-count (valid because `j=0`; validated by reproducing secp256k1's published order) shows `977` is
+  the **smallest** `c` for which `p = 2²⁵⁶−2³²−c` is prime, `p ≡ 3 (mod 4)` (fast √), `p ≡ 1 (mod 3)`
+  (the GLV endomorphism exists), **and** the curve `y²=x³+7` has **prime order** (cofactor 1). The
+  smaller candidates fail: `263` gives a **composite** curve order; `361` has `p ≡ 2 (mod 3)` (no
+  endomorphism, even order). So `977` is transparently determined by the design requirements — the
+  *opposite* of a planted magic number. Executed in `curve_structure/` (`field_constant_minimality`).
 
 - **(5) The twist is a "handle with care".** secp256k1 is not twist-secure in the clean sense; an
   implementation that skips point validation leaks ~33 bits. libsecp256k1 validates points, so Bitcoin is
