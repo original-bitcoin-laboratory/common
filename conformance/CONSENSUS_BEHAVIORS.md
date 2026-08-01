@@ -71,6 +71,17 @@ exhibits the boundary-only measurement that a timewarp would exploit.
   earlier entry — a real latent behavior of the v0.1 code. But the *rule* that addresses it (BIP30, 2012)
   and its structural successor (BIP34) are **post-v0.1**, outside this repo's reconstruction scope; they
   are recorded here as an era-map fact, not modeled as a v0.1 behavior.
+- **Latent boundaries baked into v0.1 (era-authentic, computed).** Two more "there all along" facts the
+  origin's own types/schedule fix forever: (a) the block header's `nTime` is a **uint32**, so it
+  overflows at `2³²` seconds after the epoch — **2106-02-07 06:28:16 UTC** (like the BIP34 fencepost, a
+  future boundary, not a present flaw); and (b) the subsidy halving uses integer `>>=`, so the true
+  issued cap is **20,999,999.9769 BTC** (< the folklore 21,000,000), before the ~100 BTC BIP30 loss and
+  the unspendable genesis 50. Both follow by arithmetic from the v0.1 constants.
+- **The merkle layer has a second ambiguity beyond odd-duplication.** A transaction serialized to
+  exactly 64 bytes has a `txid` equal to an interior merkle node over its two 32-byte halves (leaves and
+  nodes share one double-SHA-256) — a leaf/node ambiguity enabling forged SPV proofs, executed in
+  [`../../genesis/derivatives/hash_structure/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/hash_structure/)
+  and written up in [`HASH_STRUCTURE.md`](HASH_STRUCTURE.md); the defence is to reject 64-byte txs.
 - **Later consensus events are history, not reconstruction.** The 2013 Berkeley-DB lock fork, the 2015
   BIP66 SPV-mining fork, and CVE-2018-17144 (2018) post-date v0.1 and are out of scope; they appear in
   the lab only as dependency/timeline notes ([`DEPENDENCY_MATRIX.md`](DEPENDENCY_MATRIX.md)).

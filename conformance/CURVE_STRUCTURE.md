@@ -6,7 +6,8 @@ maps the **classical algebraic structure of the curve itself** — the propertie
 inherits by choosing secp256k1, each derived from the published SEC2 / libsecp256k1 constants with
 pure-integer arithmetic and re-evaluable identically by anyone. Executed in
 [`genesis/derivatives/curve_structure/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/curve_structure/)
-(`python -m pytest`, 6 tests).
+(`python -m pytest`, 8 tests). Its hash-layer companion — SHA-256's NUMS constants, the merkle 64-byte
+ambiguity, and the RIPEMD-160 margin — is [`HASH_STRUCTURE.md`](HASH_STRUCTURE.md).
 
 Objective derivation only — no chain privileged, no identity claim. The point is neutral: **the curve's
 "suspicious" constants are derivable (so they cannot hide a backdoor), and the one constant that is not
