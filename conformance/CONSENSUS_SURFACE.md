@@ -101,4 +101,6 @@ a partial 5‑file snapshot (no `main.h` / `script.cpp`), so header‑ and scrip
 are simply *not in that snapshot* — absence there is not evidence about the pre‑release code.
 "Later hardening" dates are from the public record; the *presence/absence* facts and line
 numbers are from source. Cross‑ref: [`DEPENDENCY_MATRIX.md`](DEPENDENCY_MATRIX.md) (the library
-layer) and the Script conformance matrix (the vocabulary layer).
+layer), [`WIRE_SURFACE.md`](WIRE_SURFACE.md) (the transport layer — what the protocol could
+*express*, as against what consensus *bounded*), and the Script conformance matrix (the
+vocabulary layer).
