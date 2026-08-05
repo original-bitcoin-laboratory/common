@@ -97,8 +97,10 @@ original-bitcoin-laboratory/     (container — not a repo)
 
 ## Provenance & method
 
-Authority is **only** the two hash‑verified archives + the whitepaper
-([`AUTHORITY.md`](AUTHORITY.md)); everything else — SNI‑as‑curator, mirrors, forks,
+Authority is **only** the two hash‑verified archives, plus the whitepaper *as a weaker,
+qualified witness* — the file everyone cites was created **24 March 2009** and its text differs from
+what was announced in October 2008, so it attests to the design as last stated rather than to the
+original document ([`AUTHORITY.md`](AUTHORITY.md)); everything else — SNI‑as‑curator, mirrors, forks,
 v0.1.3, BTC/BCH/BSV docs — is named *out of authority*. Canonical archive bytes are
 fetched from the Nakamoto Institute, verified by hash, never committed, never edited. The
 genesis blocks of the experimental chains are **deterministic** — anyone can regenerate the

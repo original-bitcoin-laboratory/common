@@ -12,13 +12,44 @@ bytes with custody*, never to a website's or repository's reputation.
 | `bitcoin-nov08.rar` | OBL-NOV08 | (md5/sha1 per SNI) | earliest preserved pre-release package |
 | `bitcoin-0.1.0.rar` | OBL-JAN09 | `8b17eb9a…` | 2012 Hal Finney recovery |
 | `bitcoin-0.1.0.tgz` | OBL-JAN09 | `ce9da465…` | 2012 Hal Finney recovery (same source tree) |
-| `bitcoin.pdf` (whitepaper) | — | `b1674191…` | bitcoin.org, captured locally |
+| `bitcoin.pdf` (whitepaper, **2009 revision**) | — | `b1674191…` | bitcoin.org, captured locally — **see the caveat below** |
 
 Nothing else is authority. All four are fetched from the Nakamoto Institute CDN
 and **independently hash-verified in-repo** (see each edition's
 `manifests/EXPECTED_CHECKSUMS.json`); the JAN09 `.rar`↔`.tgz` trees were confirmed
 **byte-identical**, giving independent-witness confidence without trusting any
 third-party mirror.
+
+### The whitepaper is a weaker authority than the archives, and here is why
+
+The two code archives are authority in the full sense: exact bytes, recovered custody, independently
+hash-verified, and the JAN09 `.rar` and `.tgz` trees confirmed byte-identical to each other.
+
+`bitcoin.pdf` is not in that class, and this table used to imply it was.
+
+Its bytes are solid — `b1674191…` is served identically by **five independent sources** (bitcoin.org
+today, the Nakamoto Institute, two Internet Archive captures, and this repository). What it is *not*
+is the document announced on 31 October 2008:
+
+- its own `/Info` dictionary reads `/CreationDate D:20090324113315-06'00'` — **created 24 March
+  2009**, 144 days after the announcement and 80 after the genesis;
+- the file behind the October 2008 link is preserved in **no** archive. The Internet Archive's
+  earliest capture is 2010-07-04; Common Crawl's `CC-MAIN-2008-2009` index — a crawl that ran during
+  the window — never visited the domain; the announcement **linked** the paper rather than attaching
+  it, so no mail archive holds one; and no hash of it was ever published;
+- and the text **demonstrably changed**. The abstract archived on bitcoin.org on **2009-01-31** still
+  read *"without the burdens of going through financial institutions"* and *"as long as honest nodes
+  control the most CPU power"*. By **2009-03-03** the site read *"a majority of CPU power is
+  controlled by nodes that are not cooperating to attack the network"*. Both states are dated by the
+  Internet Archive, not by us.
+
+So this artifact is authority for **what bitcoin.org has served since 2009**, and for the design as
+Satoshi last stated it. It is *not* a witness to October 2008, and nothing in this project should
+lean on it as one. The October text that does survive is the abstract quoted inline in the
+announcement, timestamped by the `cryptography@metzdowd.com` list server.
+
+The distinction matters because it is the same one the whole method turns on: an artifact's authority
+comes from what anchors it, not from how canonical it has become through repetition.
 
 Note the one asymmetry we preserve: **`bitcoin-nov08.tgz` is SNI-compressed**, a
 convenience companion — *not* an independently recovered original. It is recorded
