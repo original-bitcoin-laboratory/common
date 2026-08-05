@@ -45,8 +45,16 @@ is the document announced on 31 October 2008:
 
 So this artifact is authority for **what bitcoin.org has served since 2009**, and for the design as
 Satoshi last stated it. It is *not* a witness to October 2008, and nothing in this project should
-lean on it as one. The October text that does survive is the abstract quoted inline in the
-announcement, timestamped by the `cryptography@metzdowd.com` list server.
+lean on it as one.
+
+Two passages of the paper do survive from 2008, in the `cryptography@metzdowd.com` archive: the
+**abstract**, quoted inline in the 31 October announcement, and one **41-word passage of Section 4**,
+quoted by Satoshi on 8 November and identical to the shipped PDF. Both are anchored by *archive
+position* — pipermail records arrival order, and each message is bracketed by independently-dated
+messages from other list members. They are **not** server timestamps: pipermail writes its `From_`
+line from the message's own `Date` header, which we verified against all 345 messages in the window.
+The corroboration is many independent clocks plus server-recorded ordering, and that is what it
+should be called.
 
 The distinction matters because it is the same one the whole method turns on: an artifact's authority
 comes from what anchors it, not from how canonical it has become through repetition.
