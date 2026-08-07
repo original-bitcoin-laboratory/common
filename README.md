@@ -1,7 +1,7 @@
 # Original Bitcoin Laboratory
 
 **An evidence‑first, *executable* reconstruction and neutral conformance study of the
-earliest Bitcoin** — the November 2008 pre‑release and the January 2009 v0.1.0 — built
+earliest Bitcoin** — the November 2008 pre‑release and the January 2009 release — built
 entirely from two hash‑verified archives, with nothing disabled and no chain privileged.
 
 Most of Bitcoin's origin story is *prose*. This lab makes the earliest code **run**, and

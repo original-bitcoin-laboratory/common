@@ -63,8 +63,13 @@ Same **48‑file** tree as v0.1.0 (`bitcoin.exe` + DLLs + the 26 `src/` units + 
   null as its routable address. (Refines the exact quirk the R3 isolated‑network recipe
   works around.)
 - **`CAddress` default port** = `DEFAULT_PORT` (`net.h:156`).
-- **`VERSION 101 → 103`** (`serialize.h`) — the protocol/serialization version. (v0.1.0's
-  `VERSION=101` is why its About box reads "0.1.1 Alpha"; 0.1.3 → `103`.)
+- **`VERSION 101 → 103`** (`serialize.h`) — the protocol/serialization version.
+
+  > **CORRECTED 8 August 2026.** This line used to read *"v0.1.0's `VERSION=101` is why its About box
+  > reads '0.1.1 Alpha'"* — **which inverts the causality.** The About box reads `0.1.1 Alpha`
+  > because the archive **is v0.1.1**. `101` is v0.1.1's protocol version; v0.1.0's was `100`. So
+  > this table is really a **v0.1.1 → v0.1.3** diff. The consensus reading below is unaffected —
+  > every change here is still networking. Evidence: [`../VERSION_LABEL.md`](../VERSION_LABEL.md).
 - **Verbose `version` log** (`main.cpp:1737`): prints peer address + version — diagnostics,
   no behavior change.
 

@@ -10,15 +10,25 @@ bytes with custody*, never to a website's or repository's reputation.
 | Artifact | Profile | sha256 | Custody |
 |---|---|---|---|
 | `bitcoin-nov08.rar` | OBL-NOV08 | (md5/sha1 per SNI) | earliest preserved pre-release package |
-| `bitcoin-0.1.0.rar` | OBL-JAN09 | `8b17eb9a…` | 2012 Hal Finney recovery |
-| `bitcoin-0.1.0.tgz` | OBL-JAN09 | `ce9da465…` | 2012 Hal Finney recovery (same source tree) |
+| `bitcoin-0.1.0.rar` — **contents are v0.1.1** | OBL-JAN09 | `8b17eb9a…` | 2012 Hal Finney recovery |
+| `bitcoin-0.1.0.tgz` — **same tree** | OBL-JAN09 | `ce9da465…` | 2012 Hal Finney recovery (same source tree) |
 | `bitcoin.pdf` (whitepaper, **2009 revision**) | — | `b1674191…` | bitcoin.org, captured locally — **see the caveat below** |
 
 Nothing else is authority. All four are fetched from the Nakamoto Institute CDN
 and **independently hash-verified in-repo** (see each edition's
-`manifests/EXPECTED_CHECKSUMS.json`); the JAN09 `.rar`↔`.tgz` trees were confirmed
-**byte-identical**, giving independent-witness confidence without trusting any
-third-party mirror.
+`manifests/EXPECTED_CHECKSUMS.json`).
+
+> **The JAN09 archive is v0.1.1, not the 8 January v0.1.0 release** — Satoshi states its exact byte
+> size in a 10 January 2009 email, and its `bitcoin.exe` carries a **10 January** PE link stamp, two
+> days after v0.1.0 was announced. The filename is the ecosystem's and we keep it, because
+> `8b17eb9a…` is published everywhere under it. The full evidence is in
+> [`VERSION_LABEL.md`](VERSION_LABEL.md). **No consensus rule is affected**: the whole v0.1.0→v0.1.1
+> delta is `irc.cpp` and `serialize.h`, and every rule file is dated 7 January and untouched.
+
+**A correction on the `.rar`↔`.tgz` agreement.** Their extracted trees are byte-identical, and this
+document used to call that *"independent-witness confidence."* **It is not.** The custody column above
+says why: both are the *same* 2012 recovery. One artifact in two containers rules out format-level
+transcription error and nothing more. There is **one** witness for the JAN09 archive, not two.
 
 ### The whitepaper is a weaker authority than the archives, and here is why
 

@@ -8,7 +8,7 @@ read as marketing and invite easy rebuttal.
 ## The headline claim (defensible)
 
 > **The most complete executable reconstruction and neutral conformance study of the
-> earliest Bitcoin — the November 2008 pre‑release and the January 2009 v0.1.0 — that we
+> earliest Bitcoin — the November 2008 pre‑release and the January 2009 release — that we
 > are aware of. It runs the complete original Script vocabulary with nothing disabled, is
 > differential‑verified against the unmodified released binary, and measures descendants'
 > divergence from the origin with executed evidence under a single neutral method.**
