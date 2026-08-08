@@ -69,6 +69,59 @@ should be called.
 The distinction matters because it is the same one the whole method turns on: an artifact's authority
 comes from what anchors it, not from how canonical it has become through repetition.
 
+### ★ And a stronger statement, added 8 August 2026: no document can ever be *verified-authored*
+
+Everything above says the whitepaper is a **weaker** authority than the archives. That understates
+it, and the sharper statement is worth making because it changes what anyone should be looking for.
+
+**No document can be machine-verifiably established as Satoshi-authored — not this one, not any, not
+now, and not by any future discovery.** Three steps, and the third is the one usually missed.
+
+**1. No such signature exists.** The keys that can be called Satoshi's — under the convention that
+the holder of the genesis coinbase key *is* Satoshi, which is a convention and must be labelled one —
+have signed exactly two things, ever: the transaction paying Hal Finney 10 BTC in block 170, and the
+one spending its change in block 181. **Both are transaction signatures.** A Bitcoin transaction
+signature covers a hash of a serialized transaction; a message signature covers
+`H(magic ‖ len ‖ message)`. For one to serve as the other you would need a **second-preimage
+collision in SHA-256** — the thing SHA-256 exists to prevent.
+
+**2. Nobody but the key-holder can create one.** That is not a research obstacle to be worked
+around; it is what a signature scheme *is*. Those keys have been dormant since 2011.
+
+**3. ★ And even a signature would not establish authorship.** If the key-holder appeared tomorrow and
+signed the canonical paper, that would establish exactly one thing: *the holder of this key endorses
+this document.* Not who composed it. **People sign documents they did not write — that is what
+signatures are for.**
+
+> **Authorship is not a cryptographic property of a document.** No amount of searching, custody work
+> or forensic analysis makes it one, because the gap is definitional rather than evidential.
+
+**What this changes for the lab.** The correct posture is not "we could not verify the whitepaper's
+authorship" — it is that **authorship verification is not an available standard for any document, so
+the whitepaper should be judged on the standards that do exist**, where it does well:
+
+```
+a signature by a known-Satoshi key         IMPOSSIBLE -- see above
+an on-chain commitment by the author       NONE EXISTS -- every channel scanned, controls passing
+a hash published by a 2009 server          ✓ SourceForge's file API published md5 d56d71ec… for
+                                             bitcoin.pdf, and our copy matches it exactly
+independent custodians, identical bytes    ✓ SourceForge · Internet Archive · Arquivo.pt ·
+                                             Vefsafn.is · and the block chain itself
+forensic examination in a contested court   ✓ used as a control copy in COPA v Wright
+internal evidence bracketing the date       ✓ the b-money citation, on both sides
+```
+
+**And it is the reason this laboratory anchors to the code.** The January 2009 archive is
+hash-verifiable, byte-exact, and it **executes** — it reproduces the genesis block on a running
+binary. A program is not an assertion about a system; it *is* the system. No prose competes with
+that, and no prose ever needed to.
+
+*(Which is also what Satoshi's own practice suggests. He versioned, announced and distributed the
+**code** with per-file hashes; he linked the paper, revised it at least twice, and never once
+announced a revision — measured across every surviving corpus of his writing. In his own release
+announcement the software download comes first and the paper is a footnote he calls "the design
+paper.")*
+
 Note the one asymmetry we preserve: **`bitcoin-nov08.tgz` is SNI-compressed**, a
 convenience companion — *not* an independently recovered original. It is recorded
 as `"SNI-compressed companion"` and used only for browsing, never as a second
