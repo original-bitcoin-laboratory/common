@@ -67,5 +67,5 @@ than dressed up as a single‑interpreter run we cannot do.
 A skeptic can't rebut "the most complete reconstruction *we're aware of*, running the full
 original vocabulary, verified against the released binary." They *can* trivially rebut
 "closest in the world" (point at BSV, or the v0.1.0 archive) or "measures every descendant"
-(name one you didn't). Precision is the moat here — it's exactly the evidence‑first stance
+(name one you didn't). Precision is what lets a claim survive a hostile reader — it is the evidence‑first stance
 the lab is built on.

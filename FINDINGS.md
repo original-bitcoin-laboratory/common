@@ -77,7 +77,7 @@ executed where a real interpreter exists (**BTC** via `python-bitcoinlib`, **BSV
 `bitcoinx`, which is backed by real **libsecp256k1**) and **execution‑bounded** otherwise,
 stated plainly. The disabling of opcodes was mostly legitimate **defensive** security in
 immature 2009–10 code; the lab's claim is not that anything was sinister — it is that the
-**origin's capability was real and is now recoverable and checkable**. Neutrality is the moat.
+**origin's capability was real and is now recoverable and checkable**. Neutrality is what the measurement depends on.
 
 ## 6. The counterfactuals — "nothing disabled," realised
 

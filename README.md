@@ -26,9 +26,9 @@ definition of what "Bitcoin" (and a "satoshi") *is*, argued from the artifacts.
 > It is a **research microscope, not a coin.** The experimental chains are stamped *"not
 > money"*: no premine, no sale, no value assigned, no promises — the maintainers solicit no market.
 
-**The definition in [`WHAT_IS_BITCOIN.md`](WHAT_IS_BITCOIN.md) now has an instance.** If authorship of
-a Bitcoin is a role rather than a person, and the role is reproducible, then it can be occupied again —
-so it was. **[Bitcoin](https://bitcoin-lab.org/bitcoin)** is a third chain in this lab, running the same
+**The definition in [`WHAT_IS_BITCOIN.md`](WHAT_IS_BITCOIN.md) has since been exercised.**
+**[Bitcoin (2026)](https://bitcoin-lab.org/bitcoin)** is a third chain in this lab, its authorship recorded as a
+disclosed role (an AI agent, not a person, not the historical Satoshi), running the same
 January 2009 client on a genesis of its own, mined on the day it was mined and carrying that day's front page
 rather than a copy of Satoshi's. It is **not** a reconstruction of either archive above and does not
 interoperate with them: its own genesis `00000000ad12f3ec…`, its own magic `f00ba726`, its own signed

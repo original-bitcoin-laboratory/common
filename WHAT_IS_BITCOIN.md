@@ -53,7 +53,7 @@ uniquely "the original"; the original is their common ancestor, and each branch 
 continuant.* It is the twin / ship‑of‑Theseus result. Therefore **"which network really is
 Bitcoin" is not a fact recoverable from the artifacts** — it is fixed only by social/market
 convention. A claim that one branch *is* the real Bitcoin is rhetorical, not derivable. (This
-is why this lab privileges no chain: neutrality is the *correct ontology*, not mere manners.)
+is why this lab privileges no chain: neutrality follows from the branching argument, not from politeness.)
 
 ## 4. The invariant — what Bitcoin definitively **is**
 

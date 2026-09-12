@@ -10,15 +10,14 @@ they must not be.**
 ## The one honest claim
 
 > They are released as **candidates** — reconstructions whose **fidelity to a chosen origin is
-> measured and reproducible** — for anyone to run, verify, and, if they ever choose, adopt.
+> measured and reproducible** — for anyone to run and verify.
 > They are **not** "the real Bitcoin."
 
 Why this is the only defensible claim: *which* thing "is" Bitcoin has **no factual answer**
 (identity is convention — WHAT_IS_BITCOIN §3). What *is* a fact is **conformance to a stated
 origin**: under `nov08`, `NOV08‑X` measures distance **0**; under `v0.1.0`, `JAN09‑X` measures
 **1** (it differs only by re‑opening the one opcode v0.1 disabled). So we put them on the table
-with their distances shown and let **adoption — which is convention — decide.** That is
-exactly "the world decides."
+with their distances shown, and leave any convention about names to others.
 
 ## "A Bitcoin," not "the Bitcoin" — and why no instance is privileged
 
@@ -38,27 +37,26 @@ They stand as **different *kinds* of candidate — and that is *why* they're equ
 Neither claim is a fact — *which* lens (continuity vs fidelity) counts is the **contextual
 choice**, and choosing is convention. So the reconstructions are candidates alongside the
 continuity chains, ranked by neither, **precisely because the definition is ambiguous**: pick
-continuity and BTC/BSV lead; pick fidelity and the reconstructions lead. The origin‑distance tracker
+continuity and the reconstructions do not apply; pick fidelity and they measure closer. The origin‑distance tracker
 ([`genesis/derivatives/tracker/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/tracker/))
 shows both directions.
 
-## Equal *contender* ≠ equal *access* — the parity ladder
+## Definition and access are different questions
 
 "Candidate" is a claim about **definition**; *"as openly accessible as a BTC or a BSV"* is
 a claim about **infrastructure** — not the same thing. The definitional point is real now;
-the accessibility equality is a ladder (which is exactly the "three senses" below): publishing
-gives **inspect‑parity** immediately, a hardened joinable network gives **network‑parity**, and
-trading as money is the rung that stays off. Even BTC/BSV's *money* status is **market
-convention, not fidelity** — so "not tradable" makes the reconstructions less *commercialised*,
-never lesser *contenders*.
+access has three senses (below): publishing gives inspection, a joinable network gives
+participation, and trading as money is excluded — not deferred. Even BTC/BSV's *money* status is **market
+convention, not fidelity** — so "not tradable" means the reconstructions are not commercialised;
+it does not rank them.
 
 ## Three senses of "release" — the accessibility‑parity ladder (only two are safe)
 
 | Release | What it is | Verdict |
 |---|---|---|
-| **A · Artifact** | publish the source; anyone runs the MODEL and re‑derives the exact X‑genesis blocks | ✅ **done — published** |
-| **B · Non‑monetary network** | a live, joinable, **"not money"** experimental network | ✅ **done — live; see `genesis/docs/ANNOUNCE.md`** |
-| **C · Value‑bearing money** | coins people buy/sell/hold as an asset | ❌ **no — not on MODEL code** |
+| **A · Artifact** | publish the source; anyone runs the MODEL and re‑derives the exact X‑genesis blocks | **done — published** |
+| **B · Non‑monetary network** | a live, joinable, **"not money"** experimental network | **done — live; see `genesis/docs/ANNOUNCE.md`** |
+| **C · Value‑bearing money** | coins people buy/sell/hold as an asset | **excluded — not a later step** |
 
 - **A — done.** [`verify_genesis.py`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/scripts/verify_genesis.py)
   already makes both X‑genesis blocks **deterministically reproducible from source, forever**.

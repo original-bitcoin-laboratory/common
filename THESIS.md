@@ -57,11 +57,10 @@ as any live chain.
 What they are **not** — and do not try to become — is "equal to" BTC/BCH/BSV as *secured, adopted,
 monetary* networks. Those chains lead on hashpower, market, and adoption because they carry value;
 this project carries none by design, and competing there would require attaching value, which un‑does
-the reconstruction. Where the lab is at‑par‑or‑better, and where it puts its effort, is the axis it
-actually measures: **fidelity to the origin, reproducibility, and honest neutrality** — kept
-razor‑sharp. Participation is invited, not manufactured: anyone may join; whether others do is the
-community's part, not something the lab stages. Best‑in‑class at *fidelity and honesty* is the real,
-durable win — "the next Bitcoin" is the claim we keep declining.
+the reconstruction. The axis the lab measures is **fidelity to the origin, reproducibility, and neutrality**.
+Participation is invited, not manufactured: anyone may join; whether others do is the
+community's part, not something the lab stages. The lab's claim is fidelity and reproducibility;
+it does not claim to be the next Bitcoin.
 
 ## On the origin artifacts — the "most fundamental primitive" question, honestly
 
@@ -85,22 +84,22 @@ not pretend it is:
 
 ## What we deliberately do NOT claim
 
-- ❌ **"The original is the most secure / longest‑lasting Bitcoin."** Contradicted by our own
+- **"The original is the most secure / longest‑lasting Bitcoin."** Contradicted by our own
   executed evidence — v0.1's `CheckTransaction` accepts the 184‑billion‑BTC overflow. A
   version without those bounds is *less* safe, not more.
-- ❌ **"Going back to the original yields a more secure system."** A system that is minimal
+- **"Going back to the original yields a more secure system."** A system that is minimal
   *and* secure would be **origin design + the essential bounds** — which is no longer the
   pure original, but the original with its lessons learned. That is the honest frontier; we
   don't disguise it as "just the original."
-- ❌ **"The world was distracted and evaded the real solution."** The record shows engineers
+- **"The world was distracted and evaded the real solution."** The record shows engineers
   competently closing real holes the origin left open. Presuming blindness or evasion is
-  unfalsifiable, trivially rebutted, and trades away the neutrality that is this lab's moat.
-- ❌ **"The pre‑release + whitepaper are sufficient to reconstruct a full Bitcoin."** They are
+  unfalsifiable, trivially rebutted, and trades away the neutrality the measurement depends on.
+- **"The pre‑release + whitepaper are sufficient to reconstruct a full Bitcoin."** They are
   not — a partial snapshot and a design paper with a thin intersection.
-- ❌ **Any unfalsifiable superlative** ("the only," "the most secure in the world," "what
-  everyone missed"). Precision is the moat; superlatives invite easy rebuttal and read as
+- **Any unfalsifiable superlative** ("the only," "the most secure in the world," "what
+  everyone missed"). Precision is what lets a claim survive a hostile reader; superlatives invite easy rebuttal and read as
   marketing.
-- ❌ **"These networks are, or should become, at par with BTC/BCH/BSV as secured/adopted money."**
+- **"These networks are, or should become, at par with BTC/BCH/BSV as secured/adopted money."**
   They carry no value by design; matching value‑driven chains on hashpower or market would require
   attaching value, which re‑forces the guardrails and un‑does the reconstruction (see above). The
   lab competes on fidelity, reproducibility, and neutrality — never on metrics that presuppose value.
