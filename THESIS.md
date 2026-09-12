@@ -48,7 +48,7 @@ unguarded reconstruction can exist at all** — no premine, no sale, no assigned
 market, stamped in the coinbase.
 
 The two live reconstructions — **NOV08‑X** and **JAN09‑X** — are launched, operational, and joinable:
-always‑on anchors, two independent client implementations (Python and Rust), reproducible genesis,
+public anchors (availability not guaranteed), two independent client implementations (Python and Rust), reproducible genesis,
 signed releases, a seed, one‑command Docker. Anyone can run a node and join. On the axis the lab
 measures — **origin‑fidelity** — they are the reference‑closest (from the v0.1.0 origin, `JAN09‑X` = 1;
 from the Nov‑2008 origin, `NOV08‑X` = 0), by construction at least as faithful to the earliest Bitcoin

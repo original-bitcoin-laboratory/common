@@ -20,12 +20,12 @@ origin**: under `nov08`, `NOV08‑X` measures distance **0**; under `v0.1.0`, `J
 with their distances shown and let **adoption — which is convention — decide.** That is
 exactly "the world decides."
 
-## "A Bitcoin," not "the Bitcoin" — and why that makes them equal contenders
+## "A Bitcoin," not "the Bitcoin" — and why no instance is privileged
 
 The claim is deliberately *"a Bitcoin,"* never *"the Bitcoin."* Because no fact selects a unique
-referent (WHAT_IS_BITCOIN §3), **every instance — BTC, BSV, NOV08‑X, JAN09‑X — is a candidate,
-and none is privileged by fact.** They are equal contenders in the only sense that isn't
-convention: *no fact ranks them.*
+referent (WHAT_IS_BITCOIN §3), **every instance — BTC, BSV, NOV08‑X, JAN09‑X — can be measured for its distance from the
+origin, and none is privileged by fact.** The measurement ranks fidelity only; which instance the
+word "Bitcoin" denotes is left to convention.
 
 They stand as **different *kinds* of candidate — and that is *why* they're equal**:
 
@@ -36,16 +36,16 @@ They stand as **different *kinds* of candidate — and that is *why* they're equ
   *"I am what that design specifies."*
 
 Neither claim is a fact — *which* lens (continuity vs fidelity) counts is the **contextual
-choice**, and choosing is convention. So the reconstructions stand as equal contenders
-**precisely because the definition is ambiguous**: pick continuity and BTC/BSV lead; pick
-fidelity and the reconstructions lead. The origin‑distance tracker
+choice**, and choosing is convention. So the reconstructions are candidates alongside the
+continuity chains, ranked by neither, **precisely because the definition is ambiguous**: pick
+continuity and BTC/BSV lead; pick fidelity and the reconstructions lead. The origin‑distance tracker
 ([`genesis/derivatives/tracker/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/tracker/))
 shows both directions.
 
 ## Equal *contender* ≠ equal *access* — the parity ladder
 
-"Equal contender" is a claim about **definition**; *"as openly accessible as a BTC or a BSV"* is
-a claim about **infrastructure** — not the same thing. The definitional equality is real now;
+"Candidate" is a claim about **definition**; *"as openly accessible as a BTC or a BSV"* is
+a claim about **infrastructure** — not the same thing. The definitional point is real now;
 the accessibility equality is a ladder (which is exactly the "three senses" below): publishing
 gives **inspect‑parity** immediately, a hardened joinable network gives **network‑parity**, and
 trading as money is the rung that stays off. Even BTC/BSV's *money* status is **market
@@ -56,16 +56,16 @@ never lesser *contenders*.
 
 | Release | What it is | Verdict |
 |---|---|---|
-| **A · Artifact** | publish the source; anyone runs the MODEL and re‑derives the exact X‑genesis blocks | ✅ **safe, and largely already true** |
-| **B · Non‑monetary network** | a live, joinable, **"not money"** experimental network | ✅ possible — **after hardening** |
+| **A · Artifact** | publish the source; anyone runs the MODEL and re‑derives the exact X‑genesis blocks | ✅ **done — published** |
+| **B · Non‑monetary network** | a live, joinable, **"not money"** experimental network | ✅ **done — live; see `genesis/docs/ANNOUNCE.md`** |
 | **C · Value‑bearing money** | coins people buy/sell/hold as an asset | ❌ **no — not on MODEL code** |
 
-- **A — do this now.** [`verify_genesis.py`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/scripts/verify_genesis.py)
+- **A — done.** [`verify_genesis.py`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/scripts/verify_genesis.py)
   already makes both X‑genesis blocks **deterministically reproducible from source, forever**.
   Publishing the repos turns the reconstructions into permanent, world‑runnable artifacts +
-  measured candidates. This needs **no new code** — it is the pending publish step.
-- **B — feasible, but real work.** A running network people can join needs three things the
-  MODEL lacks: a **hardened production node** (not lab Python), **public infrastructure**
+  measured candidates. The repositories are published.
+- **B — done.** A running network people can join needed three things the
+  MODEL lacked: a **hardened production node** (not lab Python), **public infrastructure**
   (seeds/discovery), and **participants who keep mining it**. Framed explicitly as *not money*,
   this is the defensible way to make them *live*. It is a genuine engineering project
   (harden → audit → launch), not a switch.
@@ -85,7 +85,7 @@ Two different permanences, and only one is in your gift:
   permanent. So: *the recipe is eternal; whether a network endures is the world's choice.* Which
   is precisely what "let the world decide" means.
 
-## If it goes live (path B), the non‑negotiables
+## Path B is live; the standing conditions
 
 The concrete engineering plan — the MODEL→joinable‑node gap, a staged roadmap, and *why the
 non‑monetary status is what makes the origin's "nothing disabled" safe to run publicly* — is
@@ -95,7 +95,8 @@ The non‑negotiables:
 - **Stamped "not money"** everywhere — no premine, no sale, no yield, no price talk. The maintainers
   assign the units no value and solicit no market; mining issues valueless experimental units, and
   whether third parties value them is outside any software's control, but nothing in the design invites it.
-- **Hardened first** — a production node with real proof‑of‑work and a security review; the
+- **Hardened first** — a production node with real proof‑of‑work (the Python and Rust nodes in
+  `genesis/derivatives/`, cross‑checked byte‑for‑byte); no external security review is claimed. The
   MODEL is a research microscope, not a validator for value.
 - **Distinct identity** — its own genesis/magic/ports; **units are not satoshis**; no inherited
   balances. (Already true of the X‑chains by construction.)

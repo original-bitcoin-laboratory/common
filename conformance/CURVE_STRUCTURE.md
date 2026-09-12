@@ -26,8 +26,8 @@ derivable is a benign generator.**
 
 ## What each means
 
-- **(1)+(2) The endomorphism is a feature, not a backdoor.** `β` and `λ` — the constants the origin-grift
-  points at as "suspicious" — are *forced* by the curve order and re-derived here from `p` and `n` alone;
+- **(1)+(2) The endomorphism is a feature, not a backdoor.** `β` and `λ` — the constants sometimes
+  pointed at as "suspicious" — are *forced* by the curve order and re-derived here from `p` and `n` alone;
   they carry no author entropy. Their only real consequence is the √6 Pollard-rho speedup, a **~0.79-bit
   tax** that has been public since SEC2 (2000). `~2¹²⁷` is unbroken, and Shor moots the signature layer
   regardless (`QUANTUM_EXPOSURE.md`). The object praised for GLV speed and the object feared as a backdoor

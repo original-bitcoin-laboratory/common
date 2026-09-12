@@ -71,7 +71,7 @@ transact contracts BTC can't express, each with the full vocabulary and nothing 
 
 The node itself exists **twice** — a hardened Python node (`genesis/derivatives/netnode/`) and a
 standalone Rust node (`genesis/derivatives/validator-rs/`), cross‑checked byte‑for‑byte — and a
-live, always‑on **JAN09‑X** anchor is **joinable right now**
+public **JAN09‑X** anchor is **currently reachable** (availability is not guaranteed; see `RIGHTS.md`)
 ([`genesis/docs/ANNOUNCE.md`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/docs/ANNOUNCE.md)).
 Still **not money**: a network to inspect and run, never an asset.
 

@@ -6,14 +6,16 @@ v0.1.0 release**. It is **`bitcoin-0.1.1.rar`**, built on 10 January 2009.
 
 We inherited the label from the ecosystem and repeated it. This note records what the bytes say.
 
-## Satoshi identifies the file himself, by size
+## Satoshi identifies the file, by size
 
-Satoshi Nakamoto to Hal Finney, 10 January 2009, subject *"Re: Crash in bitcoin 0.1.0"*:
+Satoshi Nakamoto to Hal Finney, 10 January 2009, subject *"Re: Crash in bitcoin 0.1.0"* (from the
+published Satoshi–Finney correspondence, `finneynakamotoemails.pdf`, as mirrored under `doc/hal-finney/`
+in github.com/lugaxker/nakamoto-archive):
 
 > *"The attached file: **bitcoin-0.1.1.rar (filesize 2,132,686)** is the version where I deleted the
 > mapAddresses.count line, and that should be the safest version."*
 
-Four hours earlier he had quoted the code he was about to remove:
+Four hours earlier they had quoted the code they were about to remove:
 
 ```cpp
 // make it try connecting sooner
@@ -27,7 +29,7 @@ CRITICAL_BLOCK(cs_mapAddresses)
 ```
 archive size                 2,132,686 B   == the size Satoshi states for bitcoin-0.1.1.rar
 serialize.h VERSION          101           (v0.1.0's was 100)
-mapAddresses.count           ABSENT        the line he deleted FOR 0.1.1
+mapAddresses.count           ABSENT        the line deleted FOR 0.1.1
 CRITICAL_BLOCK(cs_mapAddresses)  ABSENT
 bitcoin.exe PE TimeDateStamp 1231629360 -> 2009-01-10 23:16:00 UTC
 files newer than 7 January   exactly three: irc.cpp, serialize.h, bitcoin.exe
@@ -53,7 +55,7 @@ correspondence:
 bitcoin-0.1.3.rar     103        BitCoin v0.1.3 ALPHA   2009-01-12 05:20:24 UTC
 ```
 
-Satoshi to Finney, **11 January 2009, 9:31 PM Pacific**: *"0.1.3 exe attached."* That binary's stamp
+Satoshi to Finney, **11 January 2009, 9:31 PM Pacific** (same correspondence): *"0.1.3 exe attached."* That binary's stamp
 is **11 January 21:20:24 Pacific** — linked **eleven minutes** before the mail attaching it.
 
 **On the one archive whose build time is independently known, the method lands within eleven

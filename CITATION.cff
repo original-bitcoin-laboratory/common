@@ -4,7 +4,7 @@ title: "Original Bitcoin Laboratory — Common (conformance and definitions)"
 abstract: >-
   The shared foundation of the Original Bitcoin Laboratory: the definitional and
   conformance layer under both editions (the 15 November 2008 pre-release and the
-  3 January 2009 v0.1.0 release). Argues what "Bitcoin" and a "satoshi" are from the
+  January 2009 release, distributed as v0.1.0 with v0.1.1 contents). Argues what "Bitcoin" and a "satoshi" are from the
   artifacts rather than from prose, records the consensus surface and cross-version
   diffs, and states which claims are machine-checkable and which are convention.
   A research and teaching instrument, not money. Experimental; findings are provisional.

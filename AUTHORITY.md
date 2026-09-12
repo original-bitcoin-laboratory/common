@@ -77,10 +77,11 @@ it, and the sharper statement is worth making because it changes what anyone sho
 **No document can be machine-verifiably established as Satoshi-authored — not this one, not any, not
 now, and not by any future discovery.** Three steps, and the third is the one usually missed.
 
-**1. No such signature exists.** The keys that can be called Satoshi's — under the convention that
-the holder of the genesis coinbase key *is* Satoshi, which is a convention and must be labelled one —
-have signed exactly two things, ever: the transaction paying Hal Finney 10 BTC in block 170, and the
-one spending its change in block 181. **Both are transaction signatures.** A Bitcoin transaction
+**1. No such signature exists.** No message signature from any key attributed to Satoshi is known.
+The keys that can be called Satoshi's — under the convention that the keys which mined the earliest
+blocks are Satoshi's, a convention that must be labelled one — have produced only transaction
+signatures: block 9's coinbase key spending to Hal Finney in block 170, and the spends that
+followed. **Those are transaction signatures.** A Bitcoin transaction
 signature covers a hash of a serialized transaction; a message signature covers
 `H(magic ‖ len ‖ message)`. For one to serve as the other you would need a **second-preimage
 collision in SHA-256** — the thing SHA-256 exists to prevent.
@@ -116,10 +117,10 @@ hash-verifiable, byte-exact, and it **executes** — it reproduces the genesis b
 binary. A program is not an assertion about a system; it *is* the system. No prose competes with
 that, and no prose ever needed to.
 
-*(Which is also what Satoshi's own practice suggests. He versioned, announced and distributed the
-**code** with per-file hashes; he linked the paper, revised it at least twice, and never once
-announced a revision — measured across every surviving corpus of his writing. In his own release
-announcement the software download comes first and the paper is a footnote he calls "the design
+*(Which is also what Satoshi's own practice suggests. They versioned, announced and distributed the
+**code** with per-file hashes; they linked the paper, revised it at least twice, and never once
+announced a revision — measured across every surviving corpus of their writing. In their own release
+announcement the software download comes first and the paper is a footnote they call "the design
 paper.")*
 
 Note the one asymmetry we preserve: **`bitcoin-nov08.tgz` is SNI-compressed**, a
