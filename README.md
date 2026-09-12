@@ -1,5 +1,10 @@
 # Original Bitcoin Laboratory
 
+> **Scope.** Experimental laboratory research, in progress and expected to change. It reports what
+> published, re-runnable methods find in public material — statistical and machine-verifiable
+> findings, graded by their evidence — and draws no conclusion beyond them. Not money, not advice,
+> no warranty. Details in [RIGHTS.md](RIGHTS.md).
+
 **An evidence‑first, *executable* reconstruction and neutral conformance study of the
 earliest Bitcoin** — the November 2008 pre‑release and the January 2009 release — built
 entirely from two hash‑verified archives, with nothing disabled and no chain privileged.
