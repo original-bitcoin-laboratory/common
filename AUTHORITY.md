@@ -9,14 +9,14 @@ bytes with custody*, never to a website's or repository's reputation.
 
 | Artifact | Profile | sha256 | Custody |
 |---|---|---|---|
-| `bitcoin-nov08.rar` | OBL-NOV08 | (md5/sha1 per SNI) | earliest preserved pre-release package |
+| `bitcoin-nov08.rar` | OBL-NOV08 | md5/sha1 per SNI; sha256 in `pre-genesis/manifests/LOCAL_SHA256SUMS` | earliest preserved pre-release package |
 | `bitcoin-0.1.0.rar` — **contents are v0.1.1** | OBL-JAN09 | `8b17eb9a…` | 2012 Hal Finney recovery |
 | `bitcoin-0.1.0.tgz` — **same tree** | OBL-JAN09 | `ce9da465…` | 2012 Hal Finney recovery (same source tree) |
-| `bitcoin.pdf` (whitepaper, **2009 revision**) | — | `b1674191…` | bitcoin.org, captured locally — **see the caveat below** |
+| `bitcoin.pdf` (whitepaper, **24 March 2009 revision**) | — | `b1674191…` | identified by hash; no copy is held here — **see the caveat below** |
 
-Nothing else is authority. All four are fetched from the Nakamoto Institute CDN
-and **independently hash-verified in-repo** (see each edition's
-`manifests/EXPECTED_CHECKSUMS.json`).
+Nothing else is authority. The three code archives are fetched from the Nakamoto Institute CDN
+and **independently hash-verified in-repo** (see each edition's `manifests/EXPECTED_CHECKSUMS.json`);
+the whitepaper is identified by hash and not held.
 
 > **The JAN09 archive is v0.1.1, not the 8 January v0.1.0 release** — Satoshi states its exact byte
 > size in a 10 January 2009 email, and its `bitcoin.exe` carries a **10 January** PE link stamp, two
@@ -37,8 +37,8 @@ hash-verified, and the JAN09 `.rar` and `.tgz` trees confirmed byte-identical to
 
 `bitcoin.pdf` is not in that class, and this table used to imply it was.
 
-Its bytes are solid — `b1674191…` is served identically by **five independent sources** (bitcoin.org
-today, the Nakamoto Institute, two Internet Archive captures, and this repository). What it is *not*
+Its bytes are solid — `b1674191…` is served identically by bitcoin.org today, the Nakamoto Institute
+and the Internet Archive captures, and matches the copy carved from block 230009 (custodian list below). What it is *not*
 is the document announced on 31 October 2008:
 
 - its own `/Info` dictionary reads `/CreationDate D:20090324113315-06'00'` — **created 24 March
@@ -69,7 +69,7 @@ should be called.
 The distinction matters because it is the same one the whole method turns on: an artifact's authority
 comes from what anchors it, not from how canonical it has become through repetition.
 
-### ★ And a stronger statement, added 8 August 2026: no document can ever be *verified-authored*
+### No document can be verified as Satoshi-authored (added 8 August 2026)
 
 Everything above says the whitepaper is a **weaker** authority than the archives. That understates
 it, and the sharper statement is worth making because it changes what anyone should be looking for.
@@ -95,7 +95,7 @@ this document.* Not who composed it. **People sign documents they did not write 
 signatures are for.**
 
 > **Authorship is not a cryptographic property of a document.** No amount of searching, custody work
-> or forensic analysis makes it one, because the gap is definitional rather than evidential.
+> or document examination makes it one, because the gap is definitional rather than evidential.
 
 **What this changes for the lab.** The correct posture is not "we could not verify the whitepaper's
 authorship" — it is that **authorship verification is not an available standard for any document, so
@@ -114,19 +114,12 @@ internal evidence bracketing the date       ✓ the b-money citation, on both si
 
 **And it is the reason this laboratory anchors to the code.** The January 2009 archive is
 hash-verifiable, byte-exact, and it **executes** — it reproduces the genesis block on a running
-binary. A program is not an assertion about a system; it *is* the system. No prose competes with
-that, and no prose ever needed to.
-
-*(Which is also what Satoshi's own practice suggests. They versioned, announced and distributed the
-**code** with per-file hashes; they linked the paper, revised it at least twice, and never once
-announced a revision — measured across every surviving corpus of their writing. In their own release
-announcement the software download comes first and the paper is a footnote they call "the design
-paper.")*
+binary. A program is not an assertion about a system; it *is* the system.
 
 Note the one asymmetry we preserve: **`bitcoin-nov08.tgz` is SNI-compressed**, a
 convenience companion — *not* an independently recovered original. It is recorded
 as `"SNI-compressed companion"` and used only for browsing, never as a second
-witness. (JAN09 `.rar` and `.tgz`, by contrast, are both recovered packages.)
+witness. (JAN09 `.rar` and `.tgz` are one recovery in two containers — one witness, as stated above.)
 
 ## Out of authority (named, and why)
 

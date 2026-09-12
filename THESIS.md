@@ -55,8 +55,8 @@ from the Nov‑2008 origin, `NOV08‑X` = 0), by construction at least as faithf
 as any live chain.
 
 What they are **not** — and do not try to become — is "equal to" BTC/BCH/BSV as *secured, adopted,
-monetary* networks. Those chains lead on hashpower, market, and adoption because they carry value;
-this project carries none by design, and competing there would require attaching value, which un‑does
+monetary* networks. Those networks are secured and used because they carry value;
+this project carries none by design, and matching them there would require attaching value, which un‑does
 the reconstruction. The axis the lab measures is **fidelity to the origin, reproducibility, and neutrality**.
 Participation is invited, not manufactured: anyone may join; whether others do is the
 community's part, not something the lab stages. The lab's claim is fidelity and reproducibility;
@@ -102,7 +102,7 @@ not pretend it is:
 - **"These networks are, or should become, at par with BTC/BCH/BSV as secured/adopted money."**
   They carry no value by design; matching value‑driven chains on hashpower or market would require
   attaching value, which re‑forces the guardrails and un‑does the reconstruction (see above). The
-  lab competes on fidelity, reproducibility, and neutrality — never on metrics that presuppose value.
+  laboratory measures fidelity, reproducibility and neutrality, and nothing that presupposes value.
 
 ## What we DO put out
 

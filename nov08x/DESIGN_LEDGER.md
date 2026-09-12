@@ -138,16 +138,17 @@ origin's full expressive power.
 ## 6. Network identity (all NEW‑EXP — new decisions, never semantics)
 
 Minted fresh so NOV08‑X can never be confused with, or collide with, any historical
-or live chain. Exact values fixed at genesis‑mint time; candidates below.
+or live chain. Fixed at genesis mint (`genesis/derivatives/nov08x/net.py`) and each distinct from
+every historical and laboratory chain:
 
-| Item | NOV08‑X (candidate) | must differ from |
+| Item | NOV08‑X | must differ from |
 |---|---|---|
-| genesis block | freshly mined; new timestamp + **new** coinbase message (not the Times headline) | JAN09 genesis `000000000019d668…` |
-| network magic | distinct 4 bytes (≠ `f9 be b4 d9`) | BTC/BCH/BSV magics |
-| default P2P port | e.g. `18008` (≠ 8333) | 8333 |
-| address version byte | distinct (≠ `0x00`, so not a `1…` address) | BTC/descendants |
-| initial difficulty | low, CPU‑mineable (regtest‑style, e.g. `0x207fffff`) | mainnet difficulty |
-| unit name | experimental (e.g. "novcoin‑lab unit"); **not** bitcoin/satoshi | — |
+| genesis block | `00000f08…`, freshly mined; its own timestamp and coinbase (not the Times headline) | JAN09 genesis `000000000019d668…` |
+| network magic | `f00ba708` | BTC/BCH/BSV magics |
+| default P2P port | `18008` | 8333 |
+| address version byte | `0x35` (not `0x00`, so not a `1…` address) | BTC/descendants |
+| initial difficulty | low, CPU‑mineable (leading‑zero bits, as the November code counts work) | mainnet difficulty |
+| unit name | experimental; **not** bitcoin/satoshi | — |
 | initial balances | **none** | any inherited ledger |
 
 ---
@@ -170,10 +171,8 @@ genesis/derivatives/{node/chain_port, model+port (script), wallet, p2p+chainsync
 Every module the build touches emits its provenance class into a machine‑readable
 `PROVENANCE.json` so the "November‑wins" invariant is testable, not just asserted.
 
-*Placement decision (deferred to the build step):* the executable NOV08‑X profile
-should live where it can reuse the JAN09 engines without breaking repo self‑
-containment — most likely a `nov08x/` profile inside the `genesis` repo that imports
-the reconstructed engines and applies this ledger, with this design doc as its spec.
+*Placement:* the executable NOV08‑X profile is `genesis/derivatives/nov08x/`; it imports the
+reconstructed engines and applies this ledger, and this document is its specification.
 
 ---
 

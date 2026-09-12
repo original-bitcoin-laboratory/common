@@ -46,9 +46,9 @@ shows both directions.
 "Candidate" is a claim about **definition**; *"as openly accessible as a BTC or a BSV"* is
 a claim about **infrastructure** — not the same thing. The definitional point is real now;
 access has three senses (below): publishing gives inspection, a joinable network gives
-participation, and trading as money is excluded — not deferred. Even BTC/BSV's *money* status is **market
-convention, not fidelity** — so "not tradable" means the reconstructions are not commercialised;
-it does not rank them.
+participation, and trading as money is excluded — not deferred. Whether any network is money is a
+convention outside this measurement; here "not tradable" means nothing is sold, offered, priced or
+traded, and it ranks nothing.
 
 ## Three senses of "release" — the accessibility‑parity ladder (only two are safe)
 
@@ -59,7 +59,7 @@ it does not rank them.
 | **C · Value‑bearing money** | coins people buy/sell/hold as an asset | **excluded — not a later step** |
 
 - **A — done.** [`verify_genesis.py`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/scripts/verify_genesis.py)
-  already makes both X‑genesis blocks **deterministically reproducible from source, forever**.
+  already makes both X‑genesis blocks **reproducible from source, with no live node required**.
   Publishing the repos turns the reconstructions into permanent, world‑runnable artifacts +
   measured candidates. The repositories are published.
 - **B — done.** A running network people can join needed three things the
@@ -67,21 +67,20 @@ it does not rank them.
   (seeds/discovery), and **participants who keep mining it**. Framed explicitly as *not money*,
   this is the defensible way to make them *live*. It is a genuine engineering project
   (harden → audit → launch), not a switch.
-- **C — the line we hold.** Shipping the unaudited, regtest‑easy MODEL as an asset would harm
-  adopters and resurrect the identity overreach the lab disowns. `NO value‑bearing mainnet on
+- **C — the line we hold.** The MODEL is unaudited and mines at regtest difficulty; it is not offered
+  as an asset, and nothing is sold, offered, priced or traded. `NO value‑bearing mainnet on
   MODEL code.`
 
-## On "permanent" — what you can and cannot confer
+## Two senses of permanent
 
-Two different permanences, and only one is in your gift:
+Only one of them is within the maintainers' power:
 
-- **Artifact‑permanent (yours now).** The genesis blocks re‑derive identically from source in
-  2026, 2100, forever. Publishing makes that public and immutable. Done.
-- **Network‑permanent (the world's, not yours).** Satoshi's genesis is permanent because a
-  community *kept mining the chain*. Permanence of a *live network* is a **social fact conferred
-  by adoption** — you can **offer** a permanent‑capable candidate; you cannot **declare** it
-  permanent. So: *the recipe is eternal; whether a network endures is the world's choice.* Which
-  is precisely what "let the world decide" means.
+- **Artifact permanence.** The genesis blocks re‑derive from source with no live node required; the
+  published repositories are what that rests on.
+- **Network permanence.** Satoshi's genesis persists because a community *kept mining the chain*.
+  Persistence of a *live network* is a **social fact conferred by use** — a candidate can be
+  **offered**; it cannot be **declared** permanent. The recipe is published; whether a network
+  endures is not the laboratory's to decide.
 
 ## Path B is live; the standing conditions
 
@@ -100,17 +99,17 @@ The non‑negotiables:
   balances. (Already true of the X‑chains by construction.)
 - **Candidate framing intact** — measured fidelity, never "the real Bitcoin."
 
-## What we do NOT do
+## What is not done
 
-- ❌ Present a MODEL as money, or imply investment value.
-- ❌ Claim either reconstruction **is** "the real Bitcoin" (identity is convention).
-- ❌ Claim to have made a network permanent (only adoption can).
-- ❌ Ship path B without hardening + the "not money" framing.
+- Present a MODEL as money, or imply investment value.
+- Claim either reconstruction **is** "the real Bitcoin" (identity is convention).
+- Claim to have made a network permanent (only continued use can).
+- Ship path B without hardening + the "not money" framing.
 
 ## The through‑line
 
 This is [`THESIS.md`](THESIS.md) and [`DEFINITIONAL_FIDELITY.md`](DEFINITIONAL_FIDELITY.md) put
 into action: **put the origin, seen clearly and measurably, on the table — as candidates — and
-leave adoption to the world.** We can make them *permanent artifacts* and *measured candidates*
-today; a *permanent network* is something only the world can choose to build on top of what we
-release. Our part is to release it honestly. The rest is not ours to decide.
+leave the rest to others.** They can be made *permanent artifacts* and *measured candidates*
+today; a *permanent network* is something only others can choose to build on top of what is
+released. The laboratory publishes the artifacts and the measurement; nothing further is claimed.

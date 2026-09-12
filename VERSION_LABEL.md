@@ -94,7 +94,7 @@ published checksum and help nobody.** What we correct is the description, not th
 
 ## And the part worth recording plainly
 
-**We ran this binary and it told us what it was.** `lab/genesis/r3-findings/run1/FINDINGS.md`, from
+**We ran this binary and it told us what it was.** [`genesis/r3-findings/run1/FINDINGS.md`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/r3-findings/run1/FINDINGS.md), from
 the witnessed 26 July 2026 run:
 
 > *"The About box reads **"version 0.1.1 Alpha"** … So the binary shipped in the *0.1.0* archive

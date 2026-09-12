@@ -97,8 +97,9 @@ which inherited these bounds once they existed.
 
 Source‑verified against this repo's hash‑verified **v0.1.0**; **v0.1.3** is consensus
 byte‑identical (see `V0_1_0_TO_V0_1_3_DIFF.md`), so every row is identical there. **NOV08** is
-a partial 5‑file snapshot (no `main.h` / `script.cpp`), so header‑ and script‑defined bounds
-are simply *not in that snapshot* — absence there is not evidence about the pre‑release code.
+a partial 5‑file snapshot (`main.h`, `main.cpp`, `node.h`, `node.cpp` and a readme — no `script.*`,
+no `serialize.h`), so Script‑defined bounds are simply *not in that snapshot* — absence there is not
+evidence about the pre‑release code.
 "Later hardening" dates are from the public record; the *presence/absence* facts and line
 numbers are from source. Cross‑ref: [`DEPENDENCY_MATRIX.md`](DEPENDENCY_MATRIX.md) (the library
 layer), [`WIRE_SURFACE.md`](WIRE_SURFACE.md) (the transport layer — what the protocol could

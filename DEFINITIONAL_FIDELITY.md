@@ -116,7 +116,7 @@ different thing, and should say which.
   disowned in [`THESIS.md`](THESIS.md).
 - ❌ *"The Bitcoin the world has been waiting for."* A claim about *desire*, not *definition* —
   outside this frame entirely.
-- ❌ *That anyone must adopt it.* Adoption is social; the claim is definitional.
+- That anyone must run it. Whether others do is not part of the claim.
 
 ## Network parameters vs. consensus fidelity (why the live nets mine "easy")
 

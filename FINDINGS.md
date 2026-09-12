@@ -6,8 +6,9 @@ executable** reconstruction and **neutral conformance study** of the earliest Bi
 grounded in two **hash‑verified archives + the whitepaper** — the sole authority
 ([`AUTHORITY.md`](AUTHORITY.md)) — and re‑derived here, independent of any outside account.
 
-**How to check any of it:** `python genesis/scripts/reproduce.py` — **18 steps, 359 tests**,
-all green; it re‑runs every suite and regenerates the derived matrices from source. Evidence
+**How to check any of it:** `python genesis/scripts/reproduce.py` re‑runs every suite and regenerates
+the derived matrices from source; the step list is in the script and each run writes
+`reproduce-manifest.json` with the counts. Evidence
 is labelled on a ladder: *declared → implemented → reachable → consensus‑relevant → executed
 → mined → wallet‑exposed*. The strongest rung, **JAN09‑EXECUTED**, is the original
 `bitcoin.exe` run on a Windows host reconstructing the exact genesis
@@ -75,9 +76,9 @@ The descendant matrix treats **v0.1 as the sole executed baseline** and **every*
 identically — BTC/LTC/DOGE (Bitcoin Core's engine), BCH/XEC, BSV — none privileged. Cells are
 executed where a real interpreter exists (**BTC** via `python-bitcoinlib`, **BSV** via
 `bitcoinx`, which is backed by real **libsecp256k1**) and **execution‑bounded** otherwise,
-stated plainly. The disabling of opcodes was mostly legitimate **defensive** security in
-immature 2009–10 code; the lab's claim is not that anything was sinister — it is that the
-**origin's capability was real and is now recoverable and checkable**. Neutrality is what the measurement depends on.
+stated plainly. The 2010 disabling of opcodes is on the public record as a security response; the
+laboratory takes no view on it. Its claim is that the **origin's capability was real and is now
+recoverable and checkable**. Neutrality is what the measurement depends on.
 
 ## 6. The counterfactuals — "nothing disabled," realised
 

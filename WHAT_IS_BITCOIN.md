@@ -16,7 +16,7 @@ Checked against the archived whitepaper PDF:
   Cash System") and the URL **`www.bitcoin.org`**. **Zero times in the body as a noun.**
 - The body names a **system** ("electronic cash system") and defines its **unit** as a
   **"coin"** — *"We define an electronic coin as a chain of digital signatures"* ("coin"
-  appears ~10×).
+  recurs throughout the body).
 - **"satoshi" never appears as a unit** — the sole occurrence is the **author's name**.
 
 So at the origin, **"Bitcoin" is the name of the *system/project*, not of a thing you hold.**
@@ -38,9 +38,9 @@ The one word points at seven ontologically different objects; speakers silently 
 | 6 | **Unit / asset** — "a bitcoin" (the priced thing) | ledger‑relative quantity | many |
 | 7 | **Genus / lineage** — the whole descendant family | category | one |
 
-"BTC vs BSV" is a **senses‑4/5** disagreement. A regulation's "Bitcoin" is almost always
-**sense 6** (the asset) on an *unspecified* **sense‑4** network — which is exactly why such
-text is under‑specified: it names a genus/asset without pinning the ledger.
+"BTC vs BSV" is a **senses‑4/5** disagreement. Any text that says "Bitcoin" without naming a ledger
+is usually **sense 6** (the unit) on an *unspecified* **sense‑4** network — which is why such
+text under‑specifies its referent: it names a genus/unit without pinning the ledger.
 
 ## 3. Why "which chain is *the* Bitcoin" has no factual answer
 
@@ -105,7 +105,7 @@ The code names **neither** "satoshi" **nor** "bitcoin." What
 - `COIN` names a single **aggregate**: 1 `COIN` = 100,000,000 of those atomic units.
 
 The words are conventions layered on afterward (the code's own identifier is `COIN`; "satoshi"
-is a ~2010–11 coinage). So, precisely:
+as a unit name post‑dates the code). So, precisely:
 
 > **A satoshi is the atomic, indivisible integer unit of the ledger's value field (`nValue`).**
 > That there *is* such an atomic unit, and an aggregate `COIN` above it, is artifact‑fixed and
@@ -131,9 +131,9 @@ launch; step back to the pre‑release and it is not. **The satoshi is pinned on
   instance‑root (both trace to genesis `000000000019d668…`); they *differ* only on sense 4/5
   (which post‑fork branch). The framework converts "you're wrong about what Bitcoin is" into
   the precise, tractable "we mean the same root, different branch."
-- **A regulation that says "Bitcoin."** It is pointing at sense 6 (the asset) on an
-  unspecified sense‑4 network — usually the highest‑market‑cap continuation by social default.
-  Naming that gap *is* the finding: the text under‑specifies its own referent.
+- **A text that names "Bitcoin" without naming a ledger.** It points at sense 6 (the unit) on an
+  unspecified sense‑4 network. Naming that gap *is* the finding: the text under‑specifies its own
+  referent.
 
 ## 7. What is definitive, and what is not
 
@@ -241,8 +241,9 @@ Three consequences:
    "measure everyone from the origin" gains a **time axis**: drift across forks *and* across
    years becomes measurable only in that frame. This is *executed* in
    [`genesis/derivatives/tracker/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/derivatives/tracker/)
-   — given a date, it reports each claimant's neutral distance from v0.1.0 (BTC drifts to 7 of
-   11 axes by 2016; BSV's 2020 restore moves it *back*; the lab's reconstructions sit at 0–1).
+   — given a date, it reports each claimant's distance from a chosen origin (from v0.1.0: BTC at 7 of
+   11 axes by 2016 and 9 by 2026; BSV's 2020 restore moves it *back*; JAN09‑X at 1; NOV08‑X at 3 from
+   v0.1.0 and 0 from its own November origin).
 3. **A network's sameness over its own history is convention.** Replace the rules upgrade by
    upgrade (the ship of Theseus, plank by plank) and whether it is "the same Bitcoin" has **no
    fact of the matter** — the branching problem in *time*, resolved only by convention.
@@ -254,13 +255,14 @@ latter is the convention‑governed change in question.)
 **Upshot:** *what Bitcoin **is** is time‑invariant only at the origin (design + v0.1.0 +
 genesis); every live‑network definition is a moving target set by ongoing convention.* If you
 want a definition that holds beyond doubt *and* does not drift, you are forced back to the
-frozen origin — the one thing that reads identically in 2008, 2026, and 2100.
+frozen origin, which does not need re‑issuing at each fork.
 
 ## Boundary
 
 Grounded only in the two hash‑verified origin artifacts ([`AUTHORITY.md`](AUTHORITY.md)); the
 whitepaper occurrence counts are checkable against the archived PDF, and `COIN = 100000000` is
-in the v0.1.0 source the lab reproduces. No external references, no chain privileged, no claim
+in the v0.1.0 source the lab reproduces. External chain events are cited from the public record only
+in §9, as illustrations; nothing in the definition rests on them. No chain privileged, no claim
 about value or which network anyone *should* mean. Companion to
 [`FINDINGS.md`](FINDINGS.md) (results), [`CLAIMS.md`](CLAIMS.md) (assertions), and
 [`THESIS.md`](THESIS.md) (argument).

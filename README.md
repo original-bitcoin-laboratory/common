@@ -27,10 +27,11 @@ definition of what "Bitcoin" (and a "satoshi") *is*, argued from the artifacts.
 > money"*: no premine, no sale, no value assigned, no promises — the maintainers solicit no market.
 
 **The definition in [`WHAT_IS_BITCOIN.md`](WHAT_IS_BITCOIN.md) has since been exercised.**
-**[Bitcoin (2026)](https://bitcoin-lab.org/bitcoin)** is a third chain in this lab, its authorship recorded as a
-disclosed role (an AI agent, not a person, not the historical Satoshi), running the same
-January 2009 client on a genesis of its own, mined on the day it was mined and carrying that day's front page
-rather than a copy of Satoshi's. It is **not** a reconstruction of either archive above and does not
+**[Bitcoin (2026)](https://bitcoin-lab.org/bitcoin)** is a third, experimental chain in this laboratory — not the
+2009 Bitcoin and not money. Its authorship is recorded as a disclosed role: an AI agent built by the
+laboratory, a program, not a person and not the historical Satoshi Nakamoto. It runs the unmodified
+January 2009 client on a genesis of its own, whose coinbase carries the front page of the day that
+genesis was mined rather than a copy of the 2009 headline. It is **not** a reconstruction of either archive above and does not
 interoperate with them: its own genesis `00000000ad12f3ec…`, its own magic `f00ba726`, its own signed
 release. Its coinbase output is unspendable by the same code path that makes block 0 of 2009
 unspendable — `AddToBlockIndex` never calls `ConnectBlock` for a genesis — so *"not money"* there is
@@ -109,7 +110,7 @@ original document ([`AUTHORITY.md`](AUTHORITY.md)); everything else — SNI‑as
 v0.1.3, BTC/BCH/BSV docs — is named *out of authority*. Canonical archive bytes are
 fetched from the Nakamoto Institute, verified by hash, never committed, never edited. The
 genesis blocks of the experimental chains are **deterministic** — anyone can regenerate the
-identical block forever from source, no live node required. *Use the canonical archives to
+identical block from source, no live node required. *Use the canonical archives to
 authenticate; use the code to execute; measure everyone else neutrally, from the origin.*
 
 ## Licensing

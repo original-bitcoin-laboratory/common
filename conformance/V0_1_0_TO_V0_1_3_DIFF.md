@@ -78,9 +78,8 @@ Same **48‑file** tree as v0.1.0 (`bitcoin.exe` + DLLs + the 26 `src/` units + 
 **Bitcoin's earliest evolution was network hardening, not base‑layer restriction.** In the
 weeks after launch Satoshi's first changes were making peer discovery resilient (IRC
 reconnect/backoff) and fixing address routability — while leaving the **consensus, the
-money, and the full Script vocabulary byte‑for‑byte alone.** This directly refutes any
-notion that the base layer was progressively narrowed from the start: the broad vocabulary
-was still fully live in v0.1.3, and its disabling is a distinct, **later (2010)** event. It
+money, and the full Script vocabulary byte‑for‑byte alone.** The broad vocabulary
+was still fully live in v0.1.3; its disabling is a distinct, **later (2010)** event. It
 also corroborates the lab thesis — the *capability* was stable and complete at the origin;
 what moved early was the plumbing.
 

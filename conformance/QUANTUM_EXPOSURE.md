@@ -42,8 +42,9 @@ protected by the hash until the instant it is spent.
 Verified in this repo (hash‑verified v0.1.0 source), the origin pays to **bare P2PK**, not
 P2PKH:
 
-- **Genesis coinbase** — `scriptPubKey = 5F1DF16B2B…4C3FBCF649B6… OP_CHECKSIG`
-  (a 65‑byte public key + `OP_CHECKSIG`), captured in the executed witness.
+- **Genesis coinbase** — `scriptPubKey = 04678afd…6bf11d5f OP_CHECKSIG` (a 65‑byte public key +
+  `OP_CHECKSIG`; the v0.1 debug output prints the key byte‑reversed as `5f1df16b…`), captured in the
+  executed witness.
 - **Mining reward** — `CreateTransaction` / `CreateCoinBase` set
   `vout[0].scriptPubKey = CScript() << <pubkey> << OP_CHECKSIG`
   ([`genesis/extracted/bitcoin/src/main.cpp:1462`]).
