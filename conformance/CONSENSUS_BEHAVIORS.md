@@ -9,7 +9,7 @@ consensus-*invalid* one. This is the operational meaning of the lab's thesis tha
 the whitepaper or the intent, is the specification.*
 
 Objective source inspection only — no external references, no persons, no chain privileged. Each row is
-anchored to the v0.1 source this repo holds ([`extracted/bitcoin/src/`](https://github.com/original-bitcoin-laboratory/genesis/tree/main/extracted/bitcoin/src))
+anchored to the v0.1 source the genesis repository re-extracts locally from its hash-verified archive (`extracted/bitcoin/src/`, not committed; see the [genesis README](https://github.com/original-bitcoin-laboratory/genesis#readme))
 and to the OBL engine(s) that **execute** it, with a one-line machine-checkable statement. "Executed"
 means a test in this project runs the behavior and asserts the result.
 
