@@ -105,7 +105,7 @@ pay-to-IP dialog. `V0_1_0_TO_V0_1_3_DIFF.md` then inverted the causality outrigh
 VERSION=101 is why its About box reads '0.1.1 Alpha'"* — explaining the artifact's own statement away
 as a quirk needing explanation.
 
-This laboratory's stated method is that **authority attaches to exact bytes, never to a name**. The
+This laboratory's stated method is that **authority attaches to exact bytes, not to a name**. The
 software announced its own version, on screen, in a witnessed run, and the filename won anyway.
 Recording that is the point of this note.
 
