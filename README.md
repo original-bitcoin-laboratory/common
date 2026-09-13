@@ -34,7 +34,7 @@ January 2009 client on a genesis of its own, whose coinbase carries the front pa
 genesis was mined rather than a copy of the 2009 headline. It is **not** a reconstruction of either archive above and does not
 interoperate with them: its own genesis `00000000ad12f3ec…`, its own magic `f00ba726`, its own signed
 release. Its coinbase output is unspendable by the same code path that makes block 0 of 2009
-unspendable — `AddToBlockIndex` never calls `ConnectBlock` for a genesis — so *"not money"* there is
+unspendable — `AddToBlockIndex` does not call `ConnectBlock` for a genesis — so *"not money"* there is
 structural rather than asserted. Recorded here because the definitional argument lives in this
 repository and it should say where it led.
 
@@ -79,7 +79,7 @@ The node itself exists **twice** — a hardened Python node (`genesis/derivative
 standalone Rust node (`genesis/derivatives/validator-rs/`), cross‑checked byte‑for‑byte — and a
 public **JAN09‑X** anchor is **currently reachable** (availability is not guaranteed; see `RIGHTS.md`)
 ([`genesis/docs/ANNOUNCE.md`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/docs/ANNOUNCE.md)).
-Still **not money**: a network to inspect and run, never an asset.
+Still **not money**: a network to inspect and run, not an asset.
 
 One command re‑proves everything:
 
@@ -108,7 +108,7 @@ qualified witness* — the file everyone cites was created **24 March 2009** and
 what was announced in October 2008, so it attests to the design as last stated rather than to the
 original document ([`AUTHORITY.md`](AUTHORITY.md)); everything else — SNI‑as‑curator, mirrors, forks,
 v0.1.3, BTC/BCH/BSV docs — is named *out of authority*. Canonical archive bytes are
-fetched from the Nakamoto Institute, verified by hash, never committed, never edited. The
+fetched from the Nakamoto Institute, verified by hash, not committed and not edited. The
 genesis blocks of the experimental chains are **deterministic** — anyone can regenerate the
 identical block from source, no live node required. *Use the canonical archives to
 authenticate; use the code to execute; measure everyone else neutrally, from the origin.*

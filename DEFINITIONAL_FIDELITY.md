@@ -15,7 +15,7 @@ existing candidate. It reads in the discipline of [`THESIS.md`](THESIS.md) and
 
 A definition specifies a **predicate**: *x is Bitcoin iff x realises [the design / the
 origin]*. The load‑bearing logical fact: **many x can satisfy one predicate.** Satisfying it
-makes you *a* Bitcoin‑by‑this‑definition — never *the* Bitcoin. Uniqueness of referent needs a
+makes you *a* Bitcoin‑by‑this‑definition — not *the* Bitcoin. Uniqueness of referent needs a
 **selection principle on top of the predicate**, and the only ones that exist are conventions
 (earliest launch, most‑adopted, the popularly‑recognised genesis). Hence:
 
@@ -23,7 +23,7 @@ makes you *a* Bitcoin‑by‑this‑definition — never *the* Bitcoin. Uniquene
 
 **(A) is therefore unachievable**, and it is *our own* logic that forecloses it: the
 branching‑identity result (no branch is uniquely "the original"), and the 10⁶‑vs‑10⁸
-demonstration (even the unit can only be *selected*, not derived). A critic can *always* argue
+demonstration (even the unit can only be *selected*, not derived). A critic can argue
 against (A) — not because the work is weak, but because (A) asks for a fact where only a
 convention exists, and forcing it would smuggle a convention in as truth. Two artifact‑level
 nails: the thing *most faithful to the origin is the origin*, which **already exists and runs**
@@ -120,7 +120,7 @@ different thing, and should say which.
 
 ## Network parameters vs. consensus fidelity (why the live nets mine "easy")
 
-One divergence deserves an explicit line so it is never mistaken for a fidelity gap: the live
+One divergence deserves an explicit line so it is not mistaken for a fidelity gap: the live
 experimental networks **NOV08‑X / JAN09‑X mine at regtest‑easy difficulty** with a short block
 spacing, whereas the unmodified 2009 client and the reproduced historical genesis run at the
 **real** difficulty (`0x1d00ffff`). This is deliberate, disclosed, and **confined**:
@@ -134,9 +134,9 @@ spacing, whereas the unmodified 2009 client and the reproduced historical genesi
   **deterministically re‑minable** — `verify_genesis.py` re‑derives it in a fraction of a second.
 - It **does not touch the fidelity claims.** Those rest on the real genesis `000000000019d668…`
   and the consensus rule *content*, reproduced at real difficulty by the C++/OpenSSL port and the
-  unmodified binary — never on the easy toy nets. A live `min_bits` floor
+  unmodified binary — not on the easy toy nets. A live `min_bits` floor
   (`derivatives/netnode/difficulty.py`) lets an operator require real work on an X‑network without
-  ever touching the faithful genesis.
+  touching the faithful genesis.
 
 In short: **real binary / real genesis → real difficulty (faithful); the throwaway NEW‑EXP
 networks → easy difficulty (a disclosed operational choice, security‑irrelevant because valueless).**

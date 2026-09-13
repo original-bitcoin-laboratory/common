@@ -13,7 +13,7 @@ is labelled on a ladder: *declared → implemented → reachable → consensus�
 → mined → wallet‑exposed*. The strongest rung, **JAN09‑EXECUTED**, is the original
 `bitcoin.exe` run on a Windows host reconstructing the exact genesis
 `000000000019d668…` — everything else is **MODEL** (Python port) or **PORT** (C++/OpenSSL),
-always marked.
+marked as such.
 
 ## 1. The central finding — v0.1 was already a general financial‑predicate engine
 
@@ -66,7 +66,7 @@ Three source‑grounded maps ([`conformance/`](conformance/)):
 - **Quantum** ([`QUANTUM_EXPOSURE.md`](conformance/QUANTUM_EXPOSURE.md)) — ECDSA‑on‑secp256k1
   is not post‑quantum (**Shor** breaks signatures; **Grover** only dents the hashes, so PoW
   and the address hash survive). Because a public key must be *visible* to attack, v0.1's
-  **bare‑P2PK** coinbases — pubkeys in the clear on‑chain forever — are the most exposed coin
+  **bare‑P2PK** coinbases — pubkeys in the clear on‑chain for as long as the chain is kept — are the most exposed coin
   class, a property of the origin's own design.
 - **Consensus bounds** — §2 above.
 

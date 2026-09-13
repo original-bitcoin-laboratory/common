@@ -3,7 +3,7 @@
 This project deliberately anchors to **ground zero** — the earliest hash-verifiable
 Satoshi artifacts — and treats everything else as discovery, mirror, or derivative.
 The point is to cut through the ecosystem's noise: authority attaches to *exact
-bytes with custody*, never to a website's or repository's reputation.
+bytes with custody*, not to a website's or repository's reputation.
 
 ## The authority set (all of it)
 
@@ -45,8 +45,8 @@ is the document announced on 31 October 2008:
   2009**, 144 days after the announcement and 80 after the genesis;
 - the file behind the October 2008 link is preserved in **no** archive. The Internet Archive's
   earliest capture is 2010-07-04; Common Crawl's `CC-MAIN-2008-2009` index — a crawl that ran during
-  the window — never visited the domain; the announcement **linked** the paper rather than attaching
-  it, so no mail archive holds one; and no hash of it was ever published;
+  the window — did not visit the domain; the announcement **linked** the paper rather than attaching
+  it, so no mail archive holds one; and no hash of it was published;
 - and the text **demonstrably changed**. The abstract archived on bitcoin.org on **2009-01-31** still
   read *"without the burdens of going through financial institutions"* and *"as long as honest nodes
   control the most CPU power"*. By **2009-03-03** the site read *"a majority of CPU power is
@@ -118,7 +118,7 @@ binary. A program is not an assertion about a system; it *is* the system.
 
 Note the one asymmetry we preserve: **`bitcoin-nov08.tgz` is SNI-compressed**, a
 convenience companion — *not* an independently recovered original. It is recorded
-as `"SNI-compressed companion"` and used only for browsing, never as a second
+as `"SNI-compressed companion"` and used only for browsing, not as a second
 witness. (JAN09 `.rar` and `.tgz` are one recovery in two containers — one witness, as stated above.)
 
 ## Out of authority (named, and why)
@@ -139,7 +139,7 @@ part of the evidence base:
 | bitaddress.org, UTXO Engineer | modern apps / BSV tooling | later software; comparison objects, not original evidence |
 
 The only legitimate use of any mirror is **byte cross-checking against the
-authority set**. A mirror is never promoted above "matches canonical".
+authority set**. A mirror is not promoted above "matches canonical".
 
 ## Evidence tiers
 
@@ -179,4 +179,4 @@ canonical archives from SNI and verify them ourselves.
 
 > Use mirrors/indexes to **discover**. Use the two hash-verified archives to
 > **authenticate**. Use the canonical code to **execute**. Use the conformance
-> lab to **conclude**. Nothing outside the authority set is ever cited as origin.
+> lab to **conclude**. Nothing outside the authority set is cited as origin.

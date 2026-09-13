@@ -96,4 +96,4 @@ self-contained financial machine.
 
 > Method note: this diff compares only the two frozen archives. It makes no claim
 > about intermediate private drafts, and it treats the nov08 gaps as *absence from
-> the preserved archive*, not proof the code never existed elsewhere.
+> the preserved archive*, not proof the code did not exist elsewhere.

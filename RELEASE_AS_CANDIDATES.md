@@ -21,7 +21,7 @@ with their distances shown, and leave any convention about names to others.
 
 ## "A Bitcoin," not "the Bitcoin" — and why no instance is privileged
 
-The claim is deliberately *"a Bitcoin,"* never *"the Bitcoin."* Because no fact selects a unique
+The claim is deliberately *"a Bitcoin,"* not *"the Bitcoin."* Because no fact selects a unique
 referent (WHAT_IS_BITCOIN §3), **every instance — BTC, BSV, NOV08‑X, JAN09‑X — can be measured for its distance from the
 origin, and none is privileged by fact.** The measurement ranks fidelity only; which instance the
 word "Bitcoin" denotes is left to convention.
@@ -60,7 +60,7 @@ traded, and it ranks nothing.
 
 - **A — done.** [`verify_genesis.py`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/scripts/verify_genesis.py)
   already makes both X‑genesis blocks **reproducible from source, with no live node required**.
-  Publishing the repos turns the reconstructions into permanent, world‑runnable artifacts +
+  Publishing the repos turns the reconstructions into durable, world‑runnable artifacts +
   measured candidates. The repositories are published.
 - **B — done.** A running network people can join needed three things the
   MODEL lacked: a **hardened production node** (not lab Python), **public infrastructure**
@@ -97,7 +97,7 @@ The non‑negotiables:
   MODEL is a research microscope, not a validator for value.
 - **Distinct identity** — its own genesis/magic/ports; **units are not satoshis**; no inherited
   balances. (Already true of the X‑chains by construction.)
-- **Candidate framing intact** — measured fidelity, never "the real Bitcoin."
+- **Candidate framing intact** — measured fidelity, not "the real Bitcoin."
 
 ## What is not done
 

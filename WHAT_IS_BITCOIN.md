@@ -17,7 +17,7 @@ Checked against the archived whitepaper PDF:
 - The body names a **system** ("electronic cash system") and defines its **unit** as a
   **"coin"** — *"We define an electronic coin as a chain of digital signatures"* ("coin"
   recurs throughout the body).
-- **"satoshi" never appears as a unit** — the sole occurrence is the **author's name**.
+- **"satoshi" does not appear as a unit** — the sole occurrence is the **author's name**.
 
 So at the origin, **"Bitcoin" is the name of the *system/project*, not of a thing you hold.**
 The unit is the *coin*. Neither "a bitcoin" (the asset) nor "a satoshi" (the sub‑unit) is
@@ -186,7 +186,7 @@ definition maximizes both — that is the whole trade, not a gap to close.
 *features* of the situation:
 
 - **Uniqueness wall** — a definition is a *predicate*; predicates have **many satisfiers**; the
-  artifacts contain **no identity‑selector** (above). So uniqueness of referent is *always*
+  artifacts contain **no identity‑selector** (above). So uniqueness of referent is
   convention.
 - **Completeness wall** — the design is an **incomplete specification** (it underdetermines
   Script, the unit, addresses, block size, the exact hashing). To *run*, an implementation must
@@ -212,7 +212,7 @@ demand for a unique, beyond‑doubt "the Bitcoin" is not met — and the whitepa
 
 Yes — but only for some senses, and the split is the same seam as everywhere else.
 
-- **The origin does not change — ever.** The whitepaper is a frozen document; v0.1.0 is a
+- **The origin does not change.** The whitepaper is a frozen document; v0.1.0 is a
   hash‑verified frozen artifact; the genesis block `000000000019d668…` is fixed. These are
   *history*, and history does not change. **Bitcoin‑the‑design and the origin artifacts are
   timeless.**
@@ -221,7 +221,7 @@ Yes — but only for some senses, and the split is the same seam as everywhere e
   mutable.
 
 So *proof‑of‑work / longest‑chain* has two statuses at once: **as a design element** (in the
-paper) it is fixed forever; **as a live‑network rule** it is mutable — real chains have changed
+paper) it is fixed; **as a live‑network rule** it is mutable — real chains have changed
 consensus rules over time (BTC added BIP66 / SegWit / Taproot; Bitcoin Cash changed its
 difficulty algorithm repeatedly; Monero has changed its PoW algorithm), and a network *could*
 by consensus alter or even abandon PoW. The edge case is instructive: **if a live network

@@ -85,5 +85,5 @@ what moved early was the plumbing.
 
 > Method note: compares only hash‑verified archives; gaps are *absence from the preserved
 > artifact*, not proof of non‑existence; `src:line` anchors throughout. v0.1.3 is a measured
-> successor, never presented as "the original." A single diff earns v0.1.3 no edition of its
+> successor, not presented as "the original." A single diff earns v0.1.3 no edition of its
 > own — the finding is precisely that there is *nothing consensus‑level to enshrine.*

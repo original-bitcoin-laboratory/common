@@ -5,7 +5,7 @@
 > system — it is **not recovered Satoshi code**, **not** "the hidden true Bitcoin",
 > and **not** authoritative about what November *was*. Authority stops at the two
 > hash‑verified archives (`../AUTHORITY.md`). Everything here is a disclosed design
-> choice, labelled, and must never be presented as historical fact.
+> choice, labelled, and is not presented as historical fact.
 
 ## Where it sits
 
@@ -46,9 +46,9 @@ choice is one of:
 | keys / sighash | real secp256k1 + pre‑BIP143 SignatureHash | N‑IFACE | implied by `<pubkey> OP_CHECKSIG` |
 | storage | `CDiskBlockIndex` model (`genesis/derivatives/persist`) | J‑DONOR | November is silent; January's form, labelled |
 | commerce | `CProduct`/`CReview`/atoms (R6) | J‑DONOR | shipped in v0.1; November had no commerce files — importing it is an explicit counterfactual choice |
-| network identity | new genesis/magic/ports (`genesis/derivatives/nov08x/net.py`) | NEW‑EXP | a new experimental chain, never mainnet |
+| network identity | new genesis/magic/ports (`genesis/derivatives/nov08x/net.py`) | NEW‑EXP | a new experimental chain, not mainnet |
 
-The single hard rule (from the ledger): **a J‑DONOR/NEW‑EXP import may never silently
+The single hard rule (from the ledger): **a J‑DONOR/NEW‑EXP import does not silently
 overwrite an N‑ORIG rule.** Where November specifies behaviour (its monetary
 constitution, its leading‑zero‑bits PoW, its exact‑equality coinbase), November wins —
 and it does, in `consensus.py` / `nov08x`.

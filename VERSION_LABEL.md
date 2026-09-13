@@ -33,7 +33,7 @@ mapAddresses.count           ABSENT        the line deleted FOR 0.1.1
 CRITICAL_BLOCK(cs_mapAddresses)  ABSENT
 bitcoin.exe PE TimeDateStamp 1231629360 -> 2009-01-10 23:16:00 UTC
 files newer than 7 January   exactly three: irc.cpp, serialize.h, bitcoin.exe
-readme banner                "BitCoin v0.01 ALPHA"  -- never bumped; cannot arbitrate
+readme banner                "BitCoin v0.01 ALPHA"  -- not bumped; cannot arbitrate
 ```
 
 ### The decisive one needs no custody chain

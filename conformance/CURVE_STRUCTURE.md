@@ -62,4 +62,4 @@ derivable is a benign generator.**
 - These are properties of **secp256k1 itself**, inherited by every descendant that keeps the curve — not
   a v0.1-specific behavior and not a claim about any chain or person.
 - Not a break or backdoor claim: the endomorphism is a ~0.79-bit tax; the trust atom is benign after
-  15+ years; the twist is mitigated by point validation. A tool, never authority (`common/AUTHORITY.md`).
+  15+ years; the twist is mitigated by point validation. A tool, not authority (`common/AUTHORITY.md`).

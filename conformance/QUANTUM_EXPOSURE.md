@@ -25,7 +25,7 @@ are forgeable.** Everything below follows from that.
 Shor needs the **public key** as input. Bitcoin outputs differ in whether they reveal it:
 
 - **Bare P2PK** — `<pubkey> OP_CHECKSIG`. The public key sits **in the output script, in the
-  clear, forever.** Exposed the moment it is mined; nothing to spend first.
+  clear, for as long as the chain is kept.** Exposed the moment it is mined; nothing to spend first.
 - **P2PKH** — `OP_DUP OP_HASH160 <hash160(pubkey)> OP_EQUALVERIFY OP_CHECKSIG`. The output
   carries only `RIPEMD160(SHA256(pubkey))`. The public key is **hidden behind the hash**
   and revealed only **when the coin is spent** (it enters `scriptSig`). Until then a quantum
@@ -53,7 +53,7 @@ P2PKH:
 
 P2PKH (the hashed form that would *hide* the key) is a **later** convention, not v0.1's
 default path. Objective consequence: the **earliest coins — the whole v0.1‑era coinbase
-set — carry their public keys in the clear on‑chain, permanently.** Under the exposure rule
+set — carry their public keys in the clear on‑chain, for as long as the chain is kept.** Under the exposure rule
 above, they are the single most quantum‑exposed class of outputs in the Bitcoin lineage —
 and this is a property of the **origin's own design** (the [A19] bare‑P2PK finding), not of
 any descendant. Every descendant that still holds such outputs inherits the same exposure
@@ -71,7 +71,7 @@ with a post‑quantum signature scheme rewrites exactly that one cell for every 
 - **What it does *not* fix** — a scheme swap protects *future* outputs. Coins whose public
   keys are **already exposed** (bare P2PK, reused addresses) cannot be retroactively hidden;
   they must be *moved* to a post‑quantum output **before** a quantum adversary exists — and
-  a key whose owner is gone (e.g. the earliest coins) can never be moved. This is why the
+  a key whose owner is gone (e.g. the earliest coins) cannot be moved. This is why the
   origin's bare‑P2PK cell is the sharp one: no swap reaches it after the fact.
 - **Cost** — post‑quantum signatures are far larger than 64–72‑byte ECDSA (bytes → kilobytes),
   a consensus hard change, and a migration problem, not a drop‑in.

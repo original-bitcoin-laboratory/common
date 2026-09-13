@@ -69,7 +69,7 @@ foreach(const CTxOut& txout, vout)
         return error(".. txout.nValue negative");
 ```
 
-It rejects a **negative** output but never checks an **upper bound**, and never checks that
+It rejects a **negative** output but does not check an **upper bound**, and does not check that
 the **sum** of outputs doesn't overflow a signed 64‑bit integer. That is exactly the surface
 of the **value‑overflow bug**: two enormous outputs can individually pass `nValue < 0` yet
 sum past the wrap point. This surface existed continuously from the origin until it was

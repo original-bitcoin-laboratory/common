@@ -40,5 +40,5 @@ published constants and the functions themselves. Executed in
   SHA-256 verified is confirmed standard via `sha256("")`). Documents the hash layer's structure and
   margins, inherited by every version that keeps these primitives.
 - Not a break or backdoor claim: SHA-256 is clean NUMS; the merkle ambiguity is defended by rejecting
-  64-byte transactions; the 2⁸⁰ margin is astronomically far off. A tool, never authority
+  64-byte transactions; the 2⁸⁰ margin is astronomically far off. A tool, not authority
   (`common/AUTHORITY.md`).

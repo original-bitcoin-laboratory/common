@@ -28,7 +28,7 @@ deserializer, which fails or does not.
 This is a header-shape fact with a hard consequence: **any implementation whose frame is not exactly
 these 20 bytes cannot talk to the origin binary at all.** A 24-byte frame (magic | command | size |
 checksum, as later Bitcoin uses) misreads the first four payload bytes as a checksum and rejects
-every message. The handshake never completes; nothing distinguishes it from an unreachable peer.
+every message. The handshake does not complete; nothing distinguishes it from an unreachable peer.
 
 ## B. `version` — matches later Bitcoin, which is why the gap is easy to miss
 
@@ -71,7 +71,7 @@ message only later, when `pchReserved` was absorbed into a full 16-byte address.
 
 The consequence is not a limitation to be worked around — it is a boundary of what the protocol can
 mean. A v0.1-conformant network can carry IPv6 *transport* (nothing stops a node listening on `::`
-and a peer dialling it), but it can never *gossip* an IPv6 peer, because there is no way to say one.
+and a peer dialling it), but it cannot *gossip* an IPv6 peer, because there is no way to say one.
 Discovery is IPv4 by construction. An implementation that "adds IPv6 support" to `addr` has stopped
 being v0.1-conformant, whatever else it preserves.
 

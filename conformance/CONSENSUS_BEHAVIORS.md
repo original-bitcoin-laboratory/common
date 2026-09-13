@@ -31,7 +31,7 @@ the table above holds identically across the Python, Rust, and C++ reconstructio
 
 **1 — CHECKMULTISIG off-by-one.** `OP_CHECKMULTISIG` computes `i = 3 + nKeys + nSigs` and then
 `while (i-- > 0) stack.pop_back()` (`script.cpp:783‑784`), popping the sigs, the keys, the two count
-items, **and one extra** — the item the design never accounted for. Every real multisig spend therefore
+items, **and one extra** — the item the design did not account for. Every real multisig spend therefore
 prepends a dummy `OP_0` to feed that pop. The lab reproduces the extra pop verbatim
 (`eval.rs:613`, comment *"pop nsigs+nkeys+2 + the off-by-one"*) and its multisig vectors carry the dummy.
 
@@ -55,7 +55,7 @@ CVE-2010-5139 shape. `overflow/overflow.py` runs the exact block-74638 amounts t
 
 **5 — Retarget fencepost.** `GetNextWorkRequired` walks `pindexFirst` back `nInterval-1 = 2015` blocks
 (`main.cpp:701`) and divides the resulting 2015-interval timespan by a 2016-interval budget, so the
-fixed point is `2015·τ = 2016·600 → τ = 600.30 s` — blocks run ~0.05% **slow**, permanently. (Direction
+fixed point is `2015·τ = 2016·600 → τ = 600.30 s` — blocks run ~0.05% **slow**, at every retarget. (Direction
 matters: the code under-measures elapsed time, not over-measures, so it is *slow*, not the sometimes-cited
 "599.7 s, fast".) `retarget/retarget.py` derives the fixed point from the ported function and also
 exhibits the boundary-only measurement that a timewarp would exploit.
@@ -72,7 +72,7 @@ exhibits the boundary-only measurement that a timewarp would exploit.
   and its structural successor (BIP34) are **post-v0.1**, outside this repo's reconstruction scope; they
   are recorded here as an era-map fact, not modeled as a v0.1 behavior.
 - **Latent boundaries baked into v0.1 (era-authentic, computed).** Two more "there all along" facts the
-  origin's own types/schedule fix forever: (a) the block header's `nTime` is a **uint32**, so it
+  origin's own types/schedule fix: (a) the block header's `nTime` is a **uint32**, so it
   overflows at `2³²` seconds after the epoch — **2106-02-07 06:28:16 UTC** (like the BIP34 fencepost, a
   future boundary, not a present flaw); and (b) the subsidy halving uses integer `>>=`, so the true
   issued cap is **20,999,999.9769 BTC** (< the folklore 21,000,000), before the ~100 BTC BIP30 loss and
@@ -87,4 +87,4 @@ exhibits the boundary-only measurement that a timewarp would exploit.
   the lab only as dependency/timeline notes ([`DEPENDENCY_MATRIX.md`](DEPENDENCY_MATRIX.md)).
 - "Executed" is a `MODEL`/port claim (Python/Rust/C++ reconstructions), not the original binary running;
   the executed-binary evidence is the separate `r3`/`r4` witness bundles. No chain is privileged and no
-  identity is asserted; every row is a tool, never authority (`common/AUTHORITY.md`).
+  identity is asserted; every row is a tool, not authority (`common/AUTHORITY.md`).
