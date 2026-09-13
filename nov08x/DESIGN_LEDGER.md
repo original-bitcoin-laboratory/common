@@ -204,7 +204,8 @@ Each result is captured as a deterministic evidence bundle (same discipline as
 5. Mint the **NOV08‑X** genesis + identity (§6); two isolated headless nodes. ✅ (`nov08x/net.py`: magic `f00ba708`, port 18008, genesis `00000f08…`; `test_net.py` — two nodes sync)
 6. Evidence bundle: issuance/timing/coinbase‑rule/vocabulary differences, live. ✅ (14 N‑ORIG rules in `PROVENANCE.json`; 20 tests)
 7. *(optional, walled‑off)* **NOV08‑Full** — completion toward the broader design.
-   Still open. **Interpretive**, must be labelled speculation, not presented as
+   Open as a walled‑off completion; an executable form exists (`genesis/derivatives/console/` under
+   `Rules.load("nov08")`, see `NOV08_FULL.md`). **Interpretive**, labelled speculation, not presented as
    recovered code.
 
 **Findings from building it (all N‑ORIG, source‑anchored):** NOV08's PoW is a

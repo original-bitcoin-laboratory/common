@@ -9,12 +9,12 @@ bytes with custody*, not to a website's or repository's reputation.
 
 | Artifact | Profile | sha256 | Custody |
 |---|---|---|---|
-| `bitcoin-nov08.rar` | OBL-NOV08 | md5/sha1 per SNI; sha256 in `pre-genesis/manifests/LOCAL_SHA256SUMS` | earliest preserved pre-release package |
+| `bitcoin-nov08.rar` | OBL-NOV08 | md5/sha1 per SNI (`pre-genesis/manifests/EXPECTED_CHECKSUMS.json`); a sha256 manifest is written locally by `verify-artifacts.py` | earliest preserved pre-release package |
 | `bitcoin-0.1.0.rar` — **contents are v0.1.1** | OBL-JAN09 | `8b17eb9a…` | 2012 Hal Finney recovery |
 | `bitcoin-0.1.0.tgz` — **same tree** | OBL-JAN09 | `ce9da465…` | 2012 Hal Finney recovery (same source tree) |
 | `bitcoin.pdf` (whitepaper, **24 March 2009 revision**) | — | `b1674191…` | identified by hash; no copy is held here — **see the caveat below** |
 
-Nothing else is authority. The three code archives are fetched from the Nakamoto Institute CDN
+Nothing else is authority. The code archives (two source trees; the January one held in two containers) are fetched from the Nakamoto Institute CDN
 and **independently hash-verified in-repo** (see each edition's `manifests/EXPECTED_CHECKSUMS.json`);
 the whitepaper is identified by hash and not held.
 
@@ -87,7 +87,7 @@ signature covers a hash of a serialized transaction; a message signature covers
 collision in SHA-256** — the thing SHA-256 exists to prevent.
 
 **2. Nobody but the key-holder can create one.** That is not a research obstacle to be worked
-around; it is what a signature scheme *is*. Those keys have been dormant since 2011.
+around; it is what a signature scheme *is*. Those keys are mostly dormant; the on-chain tracker records the few Patoshi coinbases that moved.
 
 **3. ★ And even a signature would not establish authorship.** If the key-holder appeared tomorrow and
 signed the canonical paper, that would establish exactly one thing: *the holder of this key endorses
@@ -103,7 +103,8 @@ the whitepaper should be judged on the standards that do exist**, where it does 
 
 ```
 a signature by a known-Satoshi key         IMPOSSIBLE -- see above
-an on-chain commitment by the author       NONE EXISTS -- every channel scanned, controls passing
+an on-chain commitment by the author       NONE FOUND -- five channels scanned, controls passing;
+                                             two of them only to block 150,000
 a hash published by a 2009 server          ✓ SourceForge's file API published md5 d56d71ec… for
                                              bitcoin.pdf, and our copy matches it exactly
 independent custodians, identical bytes    ✓ SourceForge · Internet Archive · Arquivo.pt ·
@@ -135,7 +136,7 @@ part of the evidence base:
 | `0xMagnuz/Bitcoin-v0.1` | browsing | **fork of** `benjiqq` — not independent |
 | `Fiach-Dubh/*` | availability/redundancy | **forks of** `benjiqq` / `portlandhodl` |
 | `portlandhodl/BitCoin-0.01` | candidate source checkout | single non-Satoshi commit; verify against archive before any use |
-| SourceForge → Git (v0.1.5+) | later lineage | a *different* provenance regime (Evolution Track), not ground zero |
+| SourceForge → Git (Satoshi's v0.1.5, August 2009, onward) | later lineage | a *different* provenance regime (Evolution Track), not ground zero |
 | bitaddress.org, UTXO Engineer | modern apps / BSV tooling | later software; comparison objects, not original evidence |
 
 The only legitimate use of any mirror is **byte cross-checking against the

@@ -103,9 +103,9 @@ Separate (A) from (B) and notice *where* disagreement can live: **not in the mea
 chain"* or *"the most‑adopted network"* is unbound by our result — they picked a different
 predicate. We defend the origin‑definition on principled grounds (the author's own artifacts,
 the earliest running realisation, neutrality), but it remains a **definitional stance, not a
-derivable fact.** Conceding that is exactly what makes the rest bulletproof: *everything
-downstream of the definition is objective; only the definition is a choice.* Nobody can argue
-with the measurement; anyone can choose a different definition — and then they are measuring a
+derivable fact.** Conceding that is exactly what makes the rest checkable: *everything
+downstream of the definition is objective; only the definition is a choice.* The measurement is
+what it is; anyone can choose a different definition — and then they are measuring a
 different thing, and should say which.
 
 ## What this does **not** claim

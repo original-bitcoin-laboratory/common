@@ -1,5 +1,8 @@
 # Roadmap
 
+> The programme's structure, not a to-do list. What has been executed is recorded in
+> [README.md](README.md), [FINDINGS.md](FINDINGS.md) and the genesis repository's findings sets.
+
 ## R0 — Provenance Freeze
 
 - Acquire NOV08 RAR/TGZ and JAN09 RAR/TGZ.

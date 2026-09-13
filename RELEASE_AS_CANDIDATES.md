@@ -22,7 +22,7 @@ with their distances shown, and leave any convention about names to others.
 ## "A Bitcoin," not "the Bitcoin" — and why no instance is privileged
 
 The claim is deliberately *"a Bitcoin,"* not *"the Bitcoin."* Because no fact selects a unique
-referent (WHAT_IS_BITCOIN §3), **every instance — BTC, BSV, NOV08‑X, JAN09‑X — can be measured for its distance from the
+referent (WHAT_IS_BITCOIN §3), **every instance — BTC, BSV, NOV08‑X, JAN09‑X, Bitcoin (2026) — can be measured for its distance from the
 origin, and none is privileged by fact.** The measurement ranks fidelity only; which instance the
 word "Bitcoin" denotes is left to convention.
 
@@ -63,10 +63,10 @@ traded, and it ranks nothing.
   Publishing the repos turns the reconstructions into durable, world‑runnable artifacts +
   measured candidates. The repositories are published.
 - **B — done.** A running network people can join needed three things the
-  MODEL lacked: a **hardened production node** (not lab Python), **public infrastructure**
+  MODEL lacked: a **hardened node** (the Rust validator), **public infrastructure**
   (seeds/discovery), and **participants who keep mining it**. Framed explicitly as *not money*,
-  this is the defensible way to make them *live*. It is a genuine engineering project
-  (harden → audit → launch), not a switch.
+  that is the defensible way to make them *live*; it was an engineering project, not a switch,
+  and no external audit is claimed.
 - **C — the line we hold.** The MODEL is unaudited and mines at regtest difficulty; it is not offered
   as an asset, and nothing is sold, offered, priced or traded. `NO value‑bearing mainnet on
   MODEL code.`
@@ -110,6 +110,6 @@ The non‑negotiables:
 
 This is [`THESIS.md`](THESIS.md) and [`DEFINITIONAL_FIDELITY.md`](DEFINITIONAL_FIDELITY.md) put
 into action: **put the origin, seen clearly and measurably, on the table — as candidates — and
-leave the rest to others.** They can be made *permanent artifacts* and *measured candidates*
-today; a *permanent network* is something only others can choose to build on top of what is
+leave the rest to others.** They can be made *durable, re-derivable artifacts* and *measured candidates*
+today; a *lasting network* is something only others can choose to build on top of what is
 released. The laboratory publishes the artifacts and the measurement; nothing further is claimed.

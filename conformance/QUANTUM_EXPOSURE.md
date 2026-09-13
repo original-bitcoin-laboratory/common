@@ -55,7 +55,7 @@ P2PKH (the hashed form that would *hide* the key) is a **later** convention, not
 default path. Objective consequence: the **earliest coins — the whole v0.1‑era coinbase
 set — carry their public keys in the clear on‑chain, for as long as the chain is kept.** Under the exposure rule
 above, they are the single most quantum‑exposed class of outputs in the Bitcoin lineage —
-and this is a property of the **origin's own design** (the [A19] bare‑P2PK finding), not of
+and this is a property of the **origin's own design** (the bare‑P2PK finding above), not of
 any descendant. Every descendant that still holds such outputs inherits the same exposure
 on those coins; newer P2PKH/SegWit coins are better placed until spent.
 

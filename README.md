@@ -94,7 +94,7 @@ python genesis/scripts/verify_genesis.py   # both experimental genesis blocks re
 |---|---|
 | [`common/`](.) (this one) | umbrella: [`WHAT_IS_BITCOIN.md`](WHAT_IS_BITCOIN.md), [`DEFINITIONAL_FIDELITY.md`](DEFINITIONAL_FIDELITY.md), [`THESIS.md`](THESIS.md), [`FINDINGS.md`](FINDINGS.md), [`CLAIMS.md`](CLAIMS.md), [`RELEASE_AS_CANDIDATES.md`](RELEASE_AS_CANDIDATES.md), [`AUTHORITY.md`](AUTHORITY.md), [`ROADMAP.md`](ROADMAP.md), the conformance/attack‑surface matrices, the NOV08‑X design ledger |
 | `pre-genesis/` | **OBL‑NOV08** — the Nov 15 2008 pre‑release witness + inventory |
-| `genesis/` | **OBL‑JAN09** — Bitcoin v0.1.0: the full executable reconstruction + derivatives |
+| `genesis/` | **OBL‑JAN09** — Bitcoin v0.1.0 (the archive's label; its contents are v0.1.1 — [VERSION_LABEL.md](VERSION_LABEL.md)): the full executable reconstruction + derivatives |
 
 ```text
 original-bitcoin-laboratory/     (container — not a repo)
