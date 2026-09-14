@@ -47,9 +47,9 @@ is the document announced on 31 October 2008:
   earliest capture is 2010-07-04; Common Crawl's `CC-MAIN-2008-2009` index — a crawl that ran during
   the window — did not visit the domain; the announcement **linked** the paper rather than attaching
   it, so no mail archive holds one; and no hash of it was published;
-- and the text **demonstrably changed**. The abstract archived on bitcoin.org on **2009-01-31** still
+- and the text **demonstrably changed**. The abstract archived on bitcoin.org on **[2009-01-31](https://web.archive.org/web/20090131115053/http://bitcoin.org/)** still
   read *"without the burdens of going through financial institutions"* and *"as long as honest nodes
-  control the most CPU power"*. By **2009-03-03** the site read *"a majority of CPU power is
+  control the most CPU power"*. By **[2009-03-03](https://web.archive.org/web/20090303195936/http://bitcoin.org/)** the site read *"a majority of CPU power is
   controlled by nodes that are not cooperating to attack the network"*. Both states are dated by the
   Internet Archive, not by us.
 
@@ -74,8 +74,8 @@ comes from what anchors it, not from how canonical it has become through repetit
 Everything above says the whitepaper is a **weaker** authority than the archives. That understates
 it, and the sharper statement is worth making because it changes what anyone should be looking for.
 
-**No document can be machine-verifiably established as Satoshi-authored — not this one, not any, not
-now, and not by any future discovery.** Three steps, and the third is the one usually missed.
+**No document can be machine-verifiably established as Satoshi-authored — not this one, not any; a future signature
+would not change that.** Three steps, and the third is the one usually missed.
 
 **1. No such signature exists.** No message signature from any key attributed to Satoshi is known.
 The keys that can be called Satoshi's — under the convention that the keys which mined the earliest
@@ -102,14 +102,14 @@ authorship" — it is that **authorship verification is not an available standar
 the whitepaper should be judged on the standards that do exist**, where it does well:
 
 ```
-a signature by a known-Satoshi key         IMPOSSIBLE -- see above
+a signature by a known-Satoshi key         NONE EXISTS -- a future signature would not change that; see above
 an on-chain commitment by the author       NONE FOUND -- five channels scanned, controls passing;
                                              two of them only to block 150,000
 a hash published by a 2009 server          ✓ SourceForge's file API published md5 d56d71ec… for
                                              bitcoin.pdf, and our copy matches it exactly
 independent custodians, identical bytes    ✓ SourceForge · Internet Archive · Arquivo.pt ·
                                              Vefsafn.is · and the block chain itself
-forensic examination in a contested court   ✓ used as a control copy in COPA v Wright
+document examination in a contested court   ✓ used as a control copy in COPA v Wright
 internal evidence bracketing the date       ✓ the b-money citation, on both sides
 ```
 
@@ -130,7 +130,7 @@ part of the evidence base:
 | Resource | Role here | Why not authority |
 |---|---|---|
 | Satoshi Nakamoto Institute (site/GitHub) | curator / acquisition index | mirror + rendering; we verify each artifact ourselves |
-| CitadelXBT | correspondence discovery corpus | its "verified"/annotation labels are editorial; schema inconsistent |
+| CitadelXBT | correspondence discovery corpus | its labels are the curator's own and are not used here |
 | `trottier/original-bitcoin` | adjacent executable | it is **v0.1.3**, not the v0.1.0 baseline |
 | `benjiqq/bitcoinArchive` | research mirror | copy of the same bytes (see verified mirror below) |
 | `0xMagnuz/Bitcoin-v0.1` | browsing | **fork of** `benjiqq` — not independent |

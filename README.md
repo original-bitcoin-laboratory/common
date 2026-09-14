@@ -42,8 +42,8 @@ repository and it should say where it led.
 
 - **v0.1 was a general financial‑predicate engine, not "just money."** The full 106‑opcode
   Script, m‑of‑n escrow, hash‑locks, assurance/crowdfunding contracts — *and a shipped
-  decentralized marketplace with a web‑of‑trust reputation.* All executed. (Satoshi, Jan 10
-  2009: *"the network infrastructure can support a full range of escrow transactions and
+  decentralized marketplace with a web‑of‑trust reputation.* All executed. (Satoshi to Wei Dai, 10 January
+  2009, published by Wei Dai and mirrored at https://gwern.net/doc/bitcoin/2008-nakamoto: *"the network infrastructure can support a full range of escrow transactions and
   contracts."*)
 - **The monetary constitution was set in January, not November.** Subsidy 100→50, halving
   100k→210k, block time 15→10 min, base unit `COIN` 1e6→1e8 — **the "satoshi" is
@@ -115,10 +115,12 @@ authenticate; use the code to execute; measure everyone else neutrally, from the
 
 ## Licensing
 
-Original Bitcoin source retains Satoshi Nakamoto's 2009 MIT notices. New laboratory
-material is MIT © 2026 parthod0x (named copyright holder in `LICENSE`).
+Original Bitcoin source retains Satoshi Nakamoto's 2009 MIT notices, and historical artifacts retain
+their original notices and licences. New laboratory material is MIT © 2026 parthod0x (named copyright holder in `LICENSE`).
 
 ---
 
 **Rights, sourcing and corrections:** see [RIGHTS.md](RIGHTS.md) — what this project uses,
 where it comes from, how named people are treated, and how to ask for a correction.
+
+**Tags.** The tags in this repository are annotated but not signed; they are listed and attested in the laboratory's signed tag attestation, <https://bitcoin-lab.org/TAG-ATTESTATION.txt>.

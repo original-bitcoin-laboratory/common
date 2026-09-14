@@ -9,7 +9,8 @@ We inherited the label from the ecosystem and repeated it. This note records wha
 ## Satoshi identifies the file, by size
 
 Satoshi Nakamoto to Hal Finney, 10 January 2009, subject *"Re: Crash in bitcoin 0.1.0"* (from the
-published Satoshi–Finney correspondence, `finneynakamotoemails.pdf`, as mirrored under `doc/hal-finney/`
+published Satoshi–Finney correspondence, `finneynakamotoemails.pdf`, first published at
+https://online.wsj.com/public/resources/documents/finneynakamotoemails.pdf and mirrored under `doc/hal-finney/`
 in github.com/lugaxker/nakamoto-archive):
 
 > *"The attached file: **bitcoin-0.1.1.rar (filesize 2,132,686)** is the version where I deleted the
