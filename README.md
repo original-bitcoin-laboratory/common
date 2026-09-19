@@ -12,6 +12,8 @@ entirely from two hash‑verified archives, with nothing disabled and no chain p
 Most of Bitcoin's origin story is *prose*. This lab makes the earliest code **run**, and
 lets you re‑derive it from scratch on your own machine.
 
+**New here?** [`START_HERE.md`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/START_HERE.md) in the `genesis` repository is one screen: what this is, what it is not, five findings by ID, one command.
+
 **Findings by ID:** [`FINDINGS-REGISTER.md`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/FINDINGS-REGISTER.md) in the `genesis` repository lists every finding with its grade and artifact; cite the ID.
 
 **Start with the founding question:** [`WHAT_IS_BITCOIN.md`](WHAT_IS_BITCOIN.md) — a
