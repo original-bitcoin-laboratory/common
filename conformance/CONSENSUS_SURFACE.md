@@ -47,11 +47,11 @@ retarget, merkle, subsidy and coinbase maturity are executed in the C++/OpenSSL 
 | Missing bound | Kind | v0.1.0 | Introduced later (hardening) |
 |---|---|---|---|
 | **Money range / overflow** — no `MAX_MONEY`, no `MoneyRange`, no output‑**sum** overflow check | consensus | ❌ (only `nValue < 0`) | 0.3.10, **15 Aug 2010** — the value‑overflow fix, commit `d4c6b90ca` (block 74638 the same day) |
-| **Block‑size cap** — no `MAX_BLOCK_SIZE` (1 MB); only the 32 MB serialization cap | consensus | ❌ | 0.3.1, **15 Jul 2010** — commit `a30b56ebe`, one line in `main.h` |
+| **Block‑size cap** — no `MAX_BLOCK_SIZE` (1 MB); only the 32 MB serialization cap | consensus | ❌ | constant 0.3.1, **15 Jul 2010** (`a30b56ebe`, miner-only); validity rule **7 Sep 2010** (`f1e1fb4bd`, from block 79,401) — `docs/MAX-BLOCK-SIZE-RETROFITTED.md` |
 | **Script element‑size limit** — no 520‑byte push cap (`MAX_SCRIPT_ELEMENT_SIZE`) | anti‑DoS | ❌ | 0.3.6, **29 Jul 2010** (5000 bytes), 520 bytes on 15 Aug 2010 — `docs/SCRIPT-LIMITS-RETROFITTED.md` |
 | **Script op‑count limit** — no ~201‑op ceiling | anti‑DoS | ❌ | 0.3.6, **29 Jul 2010** — `docs/SCRIPT-LIMITS-RETROFITTED.md` |
 | **Stack‑size cap** — no 1000‑element ceiling (only *underflow* guards `if (stack.size() < N)`) | anti‑DoS | ❌ | 0.3.6, **29 Jul 2010** — `docs/SCRIPT-LIMITS-RETROFITTED.md` |
-| **Signature‑op count** — no `MAX_BLOCK_SIGOPS` per‑block limit | anti‑DoS | ❌ | 2010 |
+| **Signature‑op count** — no `MAX_BLOCK_SIGOPS` per‑block limit | anti‑DoS | ❌ | **7 Sep 2010** (`f1e1fb4bd`, with the block-size rule) |
 | **Standardness** — no `IsStandard` | *policy* | ❌ | 2010 (node‑local policy, not consensus) |
 
 The element/op/stack ceilings are **executed** — the lab's real v0.1 interpreter validates
