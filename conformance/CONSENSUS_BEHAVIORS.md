@@ -22,6 +22,8 @@ means a test in this project runs the behavior and asserts the result.
 | 3 | **Merkle duplicates the last node on odd levels** — `[A,B,C]` and `[A,B,C,C]` share a root | consensus | `main.h:868‑882` (`i2 = min(i+1, nSize-1)` at `:878`) | `validator-rs/src/lib.rs:173‑177`; node `node_port.cpp`; `p2p/p2p.py:109` |
 | 4 | **No output-sum / MoneyRange check** — `CheckTransaction` bounds only `nValue < 0` per output; a two-output int64 sum can wrap past the `inputs ≥ outputs` check | consensus | `main.h:442` (`nValue < 0` only) | `overflow/overflow.py` (v0.1 accepts the block-74638 tx; the 2010 rule rejects it) |
 | 5 | **Retarget fencepost** — a 2016-block window's timespan is measured over only 2015 intervals, so real spacing settles at `2016/2015 × 600 = 600.30 s` (a hair **slow**, not fast) | consensus | `main.cpp:685‑728` (walk-back loop `i < nInterval-1` at `:701`) | `retarget/retarget.py` (fencepost fixed point + the timewarp boundary) |
+| 6 | **`OP_VERIFY`-false and `OP_RETURN` end execution, they do not fail it** — both set `pc = pend`, so the script completes with its stack as it stands (a false on top makes the spend invalid by `CastToBool`, not by a script failure; `OP_RETURN` after a true leaves a valid script) | consensus | `script.cpp:156‑173` (`pc = pend` at `:167` and `:172`) | `model/evalscript_model.py` ("pc=pend: stop, leave false on top"); six vectors in `vectors/evalscript.json` depend on it |
+| 7 | **Coinbase maturity is a fencepost below its constant** — `COINBASE_MATURITY = 100`, but `ConnectInputs` refuses the spend only while the coinbase is fewer than `COINBASE_MATURITY-1 = 99` blocks below the tip; the wallet withholds until `COINBASE_MATURITY+20 = 120` | consensus | `main.h:20`; `main.cpp:824` (`nBestHeight - pindex->nHeight < COINBASE_MATURITY-1`); `main.cpp:544` | `vectors/blocks.json` (rule string states the executed depth); `ledger/` |
 
 Each engine is cross-checked against the others: the Rust validator's golden vectors are generated from
 the Python model, and the C++/OpenSSL port is differential-tested against the model — so a behavior in
@@ -59,6 +61,24 @@ fixed point is `2015·τ = 2016·600 → τ = 600.30 s` — blocks run ~0.05% **
 matters: a naive reading of the constants, `τ = 2015/2016 · 600 = 599.70 s`, assumes the code over-measures
 elapsed time; the executed code under-measures it, so the fixed point is 600.30 s, *slow*, not 599.70 s, fast.) `retarget/retarget.py` derives the fixed point from the ported function and also
 exhibits the boundary-only measurement that a timewarp would exploit.
+
+**6 — `OP_VERIFY`-false and `OP_RETURN` stop, they do not fail.** `OP_VERIFY` pops a true and, on a false,
+sets `pc = pend` and leaves the false in place (`script.cpp:156‑169`); `OP_RETURN` sets `pc = pend`
+unconditionally (`:170‑173`). Execution then falls out of the loop as if the script had ended: a false on
+top fails the spend through `CastToBool`, a true leaves it valid. The model reproduces the stop rather
+than a failure (`evalscript_model.py:147‑151`), and six corpus vectors would flip under the modern
+"fail immediately" reading. Two vocabulary edges belong with this row: bytes `0xb0`–`0xef` are undefined
+in v0.1's `opcodetype` and hit `default: return false` (`script.cpp:797`), and a first byte at or above
+`OP_SINGLEBYTE_END = 0xf0` begins a two-byte opcode (`script.h:141‑142`, `GetOp` at `:410‑416`);
+`OP_SUBSTR` takes `(begin, size)`, not `(begin, end)` (`script.cpp:389‑397`). Recorded 20 September 2026
+after a clean-room reproduction found none of it stated here (`OBL-F-0032`).
+
+**7 — Coinbase maturity, executed.** The constant is 100, the executed consensus depth is 99: the loop at
+`main.cpp:824` walks back from the tip while `nBestHeight - pindex->nHeight < COINBASE_MATURITY-1` and
+rejects the spend if the coinbase's block is inside that walk, so the spend is allowed once the coinbase
+is 99 blocks below the tip. The wallet's `GetBlocksToMaturity` (`main.cpp:544`) uses `COINBASE_MATURITY+20`.
+The corpus's `blocks.json` states the executed depth; the surface table had stated the constant only.
+Recorded 20 September 2026 (`OBL-F-0033`).
 
 ## Scope & boundary
 

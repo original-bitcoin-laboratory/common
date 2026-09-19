@@ -28,7 +28,7 @@ Cluster Mempool). This inventory is consensus/anti‑DoS bounds; the one policy 
 | Rule / bound | Kind | v0.1.0 | Source |
 |---|---|---|---|
 | PoW difficulty retarget — 2‑week window, `nInterval = 2016`, clamp [¼×, 4×] | consensus | ✅ | `main.cpp:687‑711` |
-| Coinbase maturity — `COINBASE_MATURITY = 100` | consensus | ✅ | `main.h:20` |
+| Coinbase maturity — `COINBASE_MATURITY = 100`; the executed check allows the spend once the coinbase is 99 blocks below the tip (`main.cpp:824`, `< COINBASE_MATURITY-1`) | consensus | ✅ | `main.h:20`, `main.cpp:824` |
 | Median‑time‑past timestamp rule (+ CheckBlock future‑2h) | consensus | ✅ **executed** | `main.h:1086`, `main.cpp:1164`,`1206` |
 | Transaction finality — `IsFinal` / `nLockTime` (**height‑only**, no time threshold) | consensus | ✅ **executed** | `main.h:226`, `main.h:363` |
 | Chain reorganization — `Reorganize` (disconnect/reconnect) | consensus | ✅ | `main.cpp` (11 refs) |
