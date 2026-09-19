@@ -52,7 +52,22 @@ retarget, merkle, subsidy and coinbase maturity are executed in the C++/OpenSSL 
 | **Script op‑count limit** — no ~201‑op ceiling | anti‑DoS | ❌ | 0.3.6, **29 Jul 2010** — `docs/SCRIPT-LIMITS-RETROFITTED.md` |
 | **Stack‑size cap** — no 1000‑element ceiling (only *underflow* guards `if (stack.size() < N)`) | anti‑DoS | ❌ | 0.3.6, **29 Jul 2010** — `docs/SCRIPT-LIMITS-RETROFITTED.md` |
 | **Signature‑op count** — no `MAX_BLOCK_SIGOPS` per‑block limit | anti‑DoS | ❌ | **7 Sep 2010** (`f1e1fb4bd`, with the block-size rule) |
-| **Standardness** — no `IsStandard` | *policy* | ❌ | 2010 (node‑local policy, not consensus) |
+| **Standardness** — no `IsStandard` | *policy* | ❌ | **7 Dec 2010** (`a206a2398`, gavinandresen; node‑local policy, not consensus) |
+
+### C. Rules that entered after the 2010 hardening, and the rules nobody wrote
+
+Dated to their commits in [`genesis/docs/CONSENSUS-ATLAS.md`](https://github.com/original-bitcoin-laboratory/genesis/blob/main/docs/CONSENSUS-ATLAS.md); one constitution row each.
+
+| Rule | Kind | v0.1.0 | Introduced |
+|---|---|---|---|
+| **Time-based `nLockTime`** — the 500,000,000 height-or-time split (later named `LOCKTIME_THRESHOLD`) | consensus | ❌ height-only | **29 Oct 2009** (`dd519206a`, "non-final tx locktime changes") |
+| **Cumulative-work chain selection** — `bnChainWork` replaces `nHeight > nBestHeight` | consensus | ❌ by height | 0.3.3, **25 Jul 2010** (`3b7cd5d89`, message about JSON-RPC authentication) |
+| **Disabled opcodes** — `OP_CAT`, `OP_MUL`, `OP_LSHIFT` and twelve others fail the script | consensus | ❌ all enabled | 0.3.10, **15 Aug 2010** (`4bd188c43`, "misc changes") |
+| **Transaction-size bound** — 32 MiB per transaction, then 1 MB | consensus | ❌ | **25 Aug 2010** (`401926283`), **13 Sep 2010** (`3df62878c`) |
+| **Alert system** — one hard-coded key, safe mode | *policy* | ❌ | **25 Aug 2010** (`401926283`); removed 21 Mar 2016; key published 3 Jul 2018 |
+| **`CScriptNum`** — script arithmetic without OpenSSL's `BIGNUM`; the 4-byte operand cap unchanged | consensus | ❌ `CBigNum` | **26 Mar 2014** (PR 3965, merged 9 May 2014) |
+| **Berkeley DB lock table** — a validity rule nobody wrote; written response: ≤ 4,500 distinct txids per block, 11 Mar–15 May 2013 | *emergent* | ❌ (BDB-backed, same class) | fork at block 225,430, **11 Mar 2013**; `8bd028818`, 15 Mar 2013 (BIP 50) |
+| **OpenSSL DER parsing** — a signature-validity rule nobody wrote; written rule BIP 66 | *emergent* | ❌ (OpenSSL 0.9.8 decides) | **13 Jan 2015** (`80ad135a5`), enforced 4 Jul 2015 (BIP 66) |
 
 The element/op/stack ceilings are **executed** — the lab's real v0.1 interpreter validates
 scripts with a 600‑byte element, 250 ops, and a 1500‑deep stack, each of which the 2010 rule
