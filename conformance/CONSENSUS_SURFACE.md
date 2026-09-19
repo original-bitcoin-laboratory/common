@@ -68,6 +68,9 @@ Dated to their commits in [`genesis/docs/CONSENSUS-ATLAS.md`](https://github.com
 | **`CScriptNum`** — script arithmetic without OpenSSL's `BIGNUM`; the 4-byte operand cap unchanged | consensus | ❌ `CBigNum` | **26 Mar 2014** (PR 3965, merged 9 May 2014) |
 | **Berkeley DB lock table** — a validity rule nobody wrote; written response: ≤ 4,500 distinct txids per block, 11 Mar–15 May 2013 | *emergent* | ❌ (BDB-backed, same class) | fork at block 225,430, **11 Mar 2013**; `8bd028818`, 15 Mar 2013 (BIP 50) |
 | **OpenSSL DER parsing** — a signature-validity rule nobody wrote; written rule BIP 66 | *emergent* | ❌ (OpenSSL 0.9.8 decides) | **13 Jan 2015** (`80ad135a5`), enforced 4 Jul 2015 (BIP 66) |
+| **Transaction replacement by `nSequence`** — a newer version of a held transaction replaces it | *policy* | ✅ shipped (`main.h:408`) | disabled **19 Aug 2010** (`05454818d`, message about block-index checking) |
+| **Hard-coded checkpoints** — a chain must pass through named blocks | consensus | ❌ genesis only | **17 Jul 2010** (`ae922a36a`, "security safeguards"); five by 15 Aug 2010 |
+| **Fee rule as a relay gate** — relay refuses a transaction below `GetMinFee(1000)`; free ones rate-limited | *policy* | ✅ build-and-send only (`main.h:504`) | **12 Dec 2010** (`97ee01ad8`, "added some DoS limits") |
 
 The element/op/stack ceilings are **executed** — the lab's real v0.1 interpreter validates
 scripts with a 600‑byte element, 250 ops, and a 1500‑deep stack, each of which the 2010 rule
