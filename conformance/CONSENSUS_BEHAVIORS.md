@@ -56,8 +56,8 @@ CVE-2010-5139 shape. `overflow/overflow.py` runs the exact block-74638 amounts t
 **5 — Retarget fencepost.** `GetNextWorkRequired` walks `pindexFirst` back `nInterval-1 = 2015` blocks
 (`main.cpp:701`) and divides the resulting 2015-interval timespan by a 2016-interval budget, so the
 fixed point is `2015·τ = 2016·600 → τ = 600.30 s` — blocks run ~0.05% **slow**, at every retarget. (Direction
-matters: the code under-measures elapsed time, not over-measures, so it is *slow*, not the sometimes-cited
-"599.7 s, fast".) `retarget/retarget.py` derives the fixed point from the ported function and also
+matters: a naive reading of the constants, `τ = 2015/2016 · 600 = 599.70 s`, assumes the code over-measures
+elapsed time; the executed code under-measures it, so the fixed point is 600.30 s, *slow*, not 599.70 s, fast.) `retarget/retarget.py` derives the fixed point from the ported function and also
 exhibits the boundary-only measurement that a timewarp would exploit.
 
 ## Scope & boundary
