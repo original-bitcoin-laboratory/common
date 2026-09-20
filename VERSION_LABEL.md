@@ -89,7 +89,7 @@ wrong.
 
 ## The filename stays
 
-The artifact is called `bitcoin-0.1.0.rar` by every host that serves it, and its sha256
+The artifact is called `bitcoin-0.1.0.rar` by the hosts that serve it, and its sha256
 `8b17eb9a…` is published in our manifests and cited in our releases. **Renaming it would break every
 published checksum and help nobody.** What we correct is the description, not the filename.
 
