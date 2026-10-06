@@ -42,6 +42,16 @@ transaction finality (with v0.1's **height‑only** `nLockTime`) run in
 retarget, merkle, subsidy and coinbase maturity are executed in the C++/OpenSSL PORT
 (`genesis/derivatives/node/`) and the ledger; reorg in chain‑sync/persist.
 
+> **Correction, 6 October 2026 — the "Transaction finality" row is not consensus in v0.1.** The
+> *predicate* `IsFinal` is as described and is executed in `temporal/`. But in v0.1 nothing in
+> block validation calls it: `IsFinal` is used only by the miner when assembling a block
+> (`main.cpp:2246`) and by the wallet when choosing coins (`main.cpp:2397`, `2425`), and not by
+> `CheckBlock`, `AcceptBlock`, `ConnectBlock` or `AcceptTransaction`. **A block containing a
+> non-final transaction is valid under v0.1** — finality was miner and wallet policy. It became a
+> block rule in SVN r18 (git `dd519206a`, 29 Oct 2009), gated to `nBestHeight > 31000`
+> (*"starting around 30 Nov 2009"*). Read the row's Kind as **policy (v0.1); consensus from r18**.
+> The lab's validators (netnode, validator-rs) enforce no block-level finality, which matches v0.1.
+
 ### B. Absent in v0.1 — the bounds that came later (the sharp findings)
 
 | Missing bound | Kind | v0.1.0 | Introduced later (hardening) |

@@ -58,6 +58,17 @@ and it does, in `consensus.py` / `nov08x`.
 - Not a claim that November *contained* a marketplace or a Script file — it did not
   (R1 / the NOV08→JAN09 diff prove their absence). Importing them is a **counterfactual
   design act**, disclosed here.
+
+  > **Correction, 6 October 2026 — for the marketplace half, absent FILES are not an absent
+  > FEATURE.** The four-file November snapshot (`readme.txt`: *"These are just the main files. The
+  > rest is coming soon."*) ships no `market.cpp`/`market.h`, but its code **calls into** the
+  > commerce layer: every accepted block mints a reputation atom to the coinbase key
+  > (`main.cpp:1244-1252`, `AddAtomsAndPropagate`), the coinbase pays the single identity key
+  > `keyUser` (`main.cpp:1887`), the inventory types include `MSG_REVIEW`, `MSG_PRODUCT` and
+  > `MSG_TABLE` (`node.h:271-287`), and the order handshake (`checkorder`/`submitorder`,
+  > `main.cpp:1661-1700`) and the wallet order form (`vOrderForm`, `main.h:654-691`) are present.
+  > ⇒ Importing commerce into NOV08‑Full is **less counterfactual than stated above**: the November
+  > code already depends on it. The Script half of the bullet stands.
 - Not recovered code, not "true Bitcoin", not money. Its units are not satoshis; it
   has no inherited balances; its genesis is freshly minted.
 - Not more authoritative than NOV08‑Minimal. If you want *only* what the surviving
