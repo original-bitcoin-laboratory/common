@@ -86,6 +86,53 @@ Two headline consequences:
   the coinbase value rule loosened from exact-equality to an upper bound. The
   familiar Bitcoin monetary schedule is set in **January, not November**.
 
+## 5b. The genesis block in each edition
+
+Both editions hard-code a genesis block. Read from each edition's extracted, hash-verified `main.cpp`:
+
+| Field | NOV08 | JAN09 | anchor (nov08 / jan09) |
+|---|---|---|---|
+| `hashGenesisBlock` | `000006b15d13…0cfaa646` | `000000000019d668…b60a8ce26f` | `main.cpp:39` / `main.cpp:24` |
+| `nTime` | 1221069728 = 2008-09-10 18:02:08 UTC | 1231006505 = 2009-01-03 18:15:05 UTC | `main.cpp:1038` / `main.cpp:1468` |
+| `nBits` | `20` | `0x1d00ffff` | `main.cpp:1039` / `main.cpp:1469` |
+| `nNonce` | 141755 | 2083236893 | `main.cpp:1040` / `main.cpp:1470` |
+| coinbase `scriptSig` | `CScript() << 247422313` | `486604799`, `CBigNum(4)`, the newspaper headline | `main.cpp:1031` / `main.cpp:1460` |
+| output `nValue` | `10000` base units (0.01 coin at COIN = 1,000,000) | `50 * COIN` | `main.cpp:1032` / `main.cpp:1461` |
+| output `scriptPubKey` | `OP_CODESEPARATOR`, `CBigNum("0x31D1…D404")`, `OP_CHECKSIG` | `CBigNum("0x5F1D…6704")`, `OP_CHECKSIG` | `main.cpp:1033` / `main.cpp:1462` |
+
+**The output key is written the same way in both editions**, as a `CBigNum` hex literal pushed into the
+script. `CScript << CBigNum` pushes `CBigNum::getvch()`, which in JAN09 returns the number's bytes
+least-significant first (`bignum.h:245–255`; `bignum.h` is not among the four preserved NOV08 files).
+Read that way, each 65-byte literal begins `0x04` and is a point on secp256k1:
+
+| Edition | literal as pushed (bytes reversed) | point on secp256k1 | P2PKH form of that key |
+|---|---|---|---|
+| JAN09 | `04678afdb0fe…1d5f` | yes | `1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa` (the genesis address, as a control) |
+| NOV08 | `04d451b0d7e5…088ad131` | yes | `1K8SfPfTkvjF8YHGG134uQvjcdNDHM6UfB` |
+
+Read in the order the hex is written, neither literal begins with `0x04` and neither is a point on the
+curve, so neither is a public key in that order. The NOV08 key is not the JAN09 key, and the NOV08 block
+is not on the chain that JAN09 starts.
+
+Reproduce (standard library; `hashlib` must provide RIPEMD-160):
+
+```python
+import hashlib, re
+B58 = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+P = 2**256 - 2**32 - 977
+def b58check(p):
+    d = p + hashlib.sha256(hashlib.sha256(p).digest()).digest()[:4]
+    n, s = int.from_bytes(d, "big"), ""
+    while n: n, r = divmod(n, 58); s = B58[r] + s
+    return "1" * (len(d) - len(d.lstrip(b"\0"))) + s
+for path, line in (("nov08/main.cpp", 1033), ("v0.1.0/bitcoin/src/main.cpp", 1462)):
+    hexlit = re.search(r'CBigNum\("0x([0-9A-F]+)"\)', open(path, encoding="latin-1").read().splitlines()[line - 1]).group(1)
+    k = bytes.fromhex(hexlit)[::-1]                     # getvch(): least-significant byte first
+    x, y = int.from_bytes(k[1:33], "big"), int.from_bytes(k[33:], "big")
+    print(path, k[0] == 4 and (y * y - x ** 3 - 7) % P == 0,
+          b58check(b"\0" + hashlib.new("ripemd160", hashlib.sha256(k).digest()).digest()))
+```
+
 ## 6. Reading
 
 On the preserved bytes, **NOV08 is an early architectural witness of the ledger +
